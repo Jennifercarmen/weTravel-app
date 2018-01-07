@@ -1,0 +1,62 @@
+/* Clases Especificas */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Helpers */
+.white{
+    color: white;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.textcenter {
+    text-align: center;
+}
+.text-uppercase{
+    text-transform: uppercase
+}
+.center{
+    margin: 0 auto;
+}
+/* Vista Splash*/
+
+.splash {
+    background-color: #5755b9;
+    height: 100vh;
+}
+
+
+/* Vista Main */
+
+.main{
+    background-image: url('../assets/images/viajeros.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.opacity {
+    height: 100vh;
+    background-color: rgba(76, 5, 19, 0.53);
+}
+.texto {
+    font-size: 20px;
+    width: 60vh;
+    padding-top: 65px;
+    opacity: 1;
+}
+
