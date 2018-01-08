@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../assets/icons/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="shortcut icon" href="../assets/images/logo.png">
-  <!-- Bootstrap core CSS -->
-  <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Materialize core CSS -->
+  <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css" />
   <link href="../css/main.css" rel="stylesheet">
   <title>Viajes</title>
 </head>
@@ -19,29 +20,38 @@
 
 
     <div class="opacity">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10">
-            <p class="texto white bold">CONOCE VIAJEROS QUE TENGAN PLANES SIMILARES CONTIGO</p>
-          </div>
+      <div class="row">
+        <div class="col s12">
+          <p class="texto  bold center colorwhite">CONOCE VIAJEROS QUE TENGAN PLANES SIMILARES CONTIGO</p>
         </div>
-        <div class="row">
-            <div class="col-xs-10">
-                <div class="form-group">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary col-xs-12">Continuar con facebook</button>
-                    <br>
-                    <button id="singlebutton" name="singlebutton" class="btn btn-default col-xs-12">Crear una cuenta</button>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
 
-                </div>
-              <a href="" class="text-uppercase white bold">iniciar sessión</a>
-              </div>
+          <button id="inifacebook" class="center-align waves-effect waves-light btn">
+            <i class="fa fa-facebook fa-3" aria-hidden="true"></i> Continuar con facebook</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+
+          <a href="registry.html">
+            <button id="register" class="center-align waves-effect waves-light btn"> Crear una cuenta</button>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <a href="login.html" class="text-uppercase bold colorwhite">iniciar sessión</a>
         </div>
       </div>
   </section>
 
-  <!-- Bootstrap- jquery- JavaScript -->
+  <!-- - jquery- JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="../vendors/js/jquery.min.js"></script>
-  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../vendors/materialize/js//materialize.min.js"></script>
+  <script src="../js/login.js"></script>
 
 </body>
 

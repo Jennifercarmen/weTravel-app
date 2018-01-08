@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
   $('.logo').animate({
-    'left': '+=28%'
+    'left': '+=5%'
   }, 'slow');
   $('h4').animate({
     'font-size': 26,

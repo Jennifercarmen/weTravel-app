@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/icons/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="shortcut icon" href="../assets/images/logo.png">
-  <!-- Bootstrap core CSS -->
-  <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+  <!--Import materialize-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>
+
+  <link rel="stylesheet" href="css/token-input.css" type="text/css" />
   <link href="../css/main.css" rel="stylesheet">
-  <title>Viajes</title>
+  <title>Log In</title>
 </head>
 
-<body>
+<body class="">
+    <div class="vertical">
+    <div class="row">
+        <form class="col s12">
+                    
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="email" type="email" class="validate">
+              <label for="email" class="active">Email</label>
+            </div>
+          </div>
 
-  <section class="main">
-
-
-    <div class="opacity">
-        <div class="texto white bold">
-            CONOCE VIAJEROS QUE TENGAN PLANES SIMILARES CONTIGO
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="password" type="password" class="validate">
+              <label for="password" class="active">Password</label>
+            </div>
+          </div>
+          
+          <div class="row">
+              <div class="col s12 offset-s4">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
+        </div> 
         </div>
-        
-        <div class="panel-body">
-  
-            <div class="row">
-            
-          <div class="col-md-5" >
-          <a href="#"><img src="http://techulus.com/buttons/fb.png" /></a><br/>
-          <a href="#"><img src="http://techulus.com/buttons/tw.png" /></a><br/>
-          <a href="#"><img src="http://techulus.com/buttons/gplus.png" /></a>
-          </div>
-          
-              <div class="col-md-7" style="border-left:1px solid #ccc;height:160px">
-          <form class="form-horizontal">
-          <fieldset>
-          
-            <input id="textinput" name="textinput" type="text" placeholder="Enter User Name" class="form-control input-md">
-            <div class="spacing"><input type="checkbox" name="checkboxes" id="checkboxes-0" value="1"><small> Remember me</small></div>
-            <input id="textinput" name="textinput" type="text" placeholder="Enter Password" class="form-control input-md">
-            <div class="spacing"><a href="#"><small> Forgot Password?</small></a><br/></div>
-            <button id="singlebutton" name="singlebutton" class="btn btn-info btn-sm pull-right">Sign In</button>
-          
-          
-          </fieldset>
-          </form>
-          </div>
-              
-          </div>
-              
-          </div>
+        </form>
+      </div>
+    </div>        
 
-    </div>
-
-  </section>
-
-  <!-- Bootstrap- jquery- JavaScript -->
+ 
+  <!-- Materialize  Jquery JavaScript -->
   <script src="../vendors/js/jquery.min.js"></script>
-  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
 </body>
 
 </html>
