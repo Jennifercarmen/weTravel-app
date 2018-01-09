@@ -204,4 +204,36 @@ color: #26a69a;
 .icon_post {
     margin: 3px 5px;
 }
+/*---------------------chat.................*/
 
+.chat{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  i.right{
+    margin-left: 0;
+  }
+  input[type=text]:not(.browser-default){
+      width: 85%;
+  }
+  .bg_color{
+    background-color: #e8f5e9;
+    padding: 20px;
+  }
+  .encabezado{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 50px 10px 0 10px;
+    background-color: #26a69a;
+     }
+  .tam_chica{
+    width: 50px;
+  }
+  .call{
+    float: right;
+    border-radius: 50%;
+    padding: 5px;
+    border:1px solid wheat;
+  }
+  /*---------------------Fin chat.................*/
