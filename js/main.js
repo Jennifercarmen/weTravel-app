@@ -20,29 +20,27 @@ $inifacebook.on('click', signInFacebook);
 
 $inigoogle.on('click', signInGoogle);
 function initApp() {
-  usuariosConectados = database.ref('/connected');
-  usuarios = database.ref('/Usuarios');
-
-  login(user.uid, user.displayName || user.email);
+  registrationUsers(user.uid, user.displayName, user.email);
+  login(user.uid, user.displayName ,user.email);
   window.location.href = 'home.html';  
 }
-function registrationUsers(name, email) {
-  var conectado = usuariosConectados.push({
-    email: email,
-    name: name
+function registrationUsers(uid,name, email) {
+  firebase.database().ref('Usuarios/' + uid).set({
+    name: name,
+    email: email
   });
-  conectadoKey = conectado.key;
 }
-function login(uid, name) {
-  var conectado = usuariosConectados.push({
-    uid: uid,
-    name: name
+function login(uid, name,email) {
+  firebase.database().ref('connected/' + uid).set({
+    name: name,
+    email: email
   });
-  conectadoKey = conectado.key;
 }
 function signOut() {
-  database.ref('/connected/' + conectadoKey).remove();
-  window.location.href = 'main.html';  
+  firebase.auth().onAuthStateChanged(function(user) {
+    database.ref('/connected/' +  user.uid).remove();
+    window.location.href = 'main.html';  
+    });
 };
 function signInFacebook() {
   var provider = new firebase.auth.FacebookAuthProvider();
