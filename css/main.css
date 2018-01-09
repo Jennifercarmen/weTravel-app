@@ -84,6 +84,7 @@ body {
 color: #26a69a; 
 }
 
+
 /*--------- view home --------*/
 .bg-image {
     background-image: url('../assets/images/quito.jpg');
@@ -175,6 +176,9 @@ color: #26a69a;
 .border {
     border: 2px solid #ffffff;
 }
-
+#mapa {
+    width: 100%;
+    height: 300px;
+}
 /*----------- user view ------------*/
 

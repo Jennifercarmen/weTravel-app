@@ -3,15 +3,12 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="assets/icons/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         
       <!--Import materialize-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>
-    
-      <link rel="stylesheet" href="css/token-input.css" type="text/css" />
-      <link href="../css/main.css" rel="stylesheet">
+          <link href="../css/main.css" rel="stylesheet">
       <title>Perfil</title>
     </head>
     
@@ -36,51 +33,65 @@
             </ul>
           </div>
         </nav>
-        <br>
+        <br>       
         <div class="container">
             <div class="row">
-                <img src="../assets/images/user.jpg" class="responsive-img col s6 offset-s3 circle" alt="">
+                <img id="img-user" class="responsive-img col s6 offset-s3 circle" alt="">
+            </div>
+            <div class="row">
+              <h6 class="center-align bold" id="name-user"></h6>
             </div>
         </div>
+   
         <ul class="collapsible" data-collapsible="accordion">
             <li>
               <div class="collapsible-header">
                 <i class="material-icons">place</i>
-                Ubicación
+                <a  href="maps.html">
+                Ubicación</a>
+              </div>
             </li>
             <li>
               <div class="collapsible-header">
                 <i class="material-icons">business</i>
                 Job
+              </div>
             </li>
             <li>
                 <div class="collapsible-header">
                   <i class="material-icons">favorite</i>
                   Estilo de viaje
+                </div>
             </li>
             <li>
                 <div class="collapsible-header">
                   <i class="material-icons">face</i>
                   Amigos
+                </div>
             </li>
             <li>
                 <div class="collapsible-header">
                   <i class="material-icons">linked_camera</i>
                   Fotos
+                </div>
             </li>
             <li>
                 <div class="collapsible-header">
                   <i class="material-icons">chat</i>
                   Iniciar Chat
+                </div>
             </li>
           </ul>
         
-        
-     
+  
+    
       <!-- Materialize  Jquery JavaScript -->
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
       <script src="../vendors/js/jquery.min.js"></script>
       <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+      <script src="../js/helpers/config_firebase.js"></script>      
       <script src="../js/user.js"></script>
+
     </body>
     
     </html>
