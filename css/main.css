@@ -83,3 +83,98 @@ body {
 .color_h2{
 color: #26a69a; 
 }
+
+/*--------- view home --------*/
+.bg-image {
+    background-image: url('../assets/images/quito.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image1 {
+    background-image: url('../assets/images/santiago.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image2 {
+    background-image: url('../assets/images/paris.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image3 {
+    background-image: url('../assets/images/madrid.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image4 {
+    background-image: url('../assets/images/roma.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image5 {
+    background-image: url('../assets/images/cuzco.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image6 {
+    background-image: url('../assets/images/tokyo.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image7 {
+    background-image: url('../assets/images/seul.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image8 {
+    background-image: url('../assets/images/rio.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image9 {
+    background-image: url('../assets/images/london.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image10 {
+    background-image: url('../assets/images/mexico.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.bg-image11 {
+    background-image: url('../assets/images/buenosaires.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+}
+.center {
+    margin-top: 25%;
+}
+.border {
+    border: 2px solid #ffffff;
+}
+
+/*----------- user view ------------*/
+
