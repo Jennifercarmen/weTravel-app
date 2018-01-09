@@ -31,7 +31,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var element = e.val();
 
     var mensaje = element.message;
-    html += '<div>' + mensaje + '</div>';
+    html += '<div class="div_color">' + mensaje + '<div class="style_icons">' +'<i class="tiny material-icons icon_post">favorite_border</i>' + '<i class="tiny material-icons icon_post">message</i>' + '<i class="tiny material-icons icon_post">share</i>'+ '</div>' + '</div>';
+    
   });
   $($chatUl).append(html);
 });
