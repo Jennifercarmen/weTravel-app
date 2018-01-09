@@ -26,4 +26,5 @@ firebase.auth().onAuthStateChanged(function(user) {
     // ...
   }
 });
+
 $('.button-collapse').sideNav();
