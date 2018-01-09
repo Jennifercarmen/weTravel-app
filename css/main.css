@@ -70,11 +70,9 @@ body {
     border-radius: 15px;
     padding: 0px 20px;
 }
-    #register {
+    #inigoogle {
         border-radius: 15px;
-        background-color: transparent;
-        border: 1px solid;
-        padding: 0px 50px;
+        background-color: #dd4b39;
     }
 /*-------clases login-----------*/
 .vertical {
