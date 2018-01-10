@@ -42,6 +42,6 @@ $notificacion.on('click', function() {
 
 var $publication = $('#publication');
 $publication.on('click', function() {
-  window.location.href = 'post.html';
+  window.location.href = 'home.html';
 });
 
