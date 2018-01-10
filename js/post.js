@@ -91,7 +91,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '<i class="material-icons right">send</i>' +
       '</button>          </div>' +
       '<div class="row">' +
-      '<div class="col s4"><i class="tiny material-icons icon_post">favorite_border</i></div>' +
+      '<div class="col s4"><i  id="favorite" class="tiny material-icons icon_post">favorite_border</i></div>' +
       '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
       '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
       '</div>' +
@@ -107,9 +107,6 @@ firebase.database().ref('post').on('value', function(snapshot) {
   $($chatUl).append(html);
 });
 
-$('#camino').on('click', function() {
-  window.location.href = 'chat.html';
-});
 var $messages = $('#messages');
 
 $messages.on('click', function() {
@@ -168,7 +165,7 @@ $publication.on('click', function() {
  $viajes.on('click', function() {
   window.location.href = 'viajes.html';
 });
-var $message = $('#message');
-$message.on('click', function() {
+var $messages = $('#messages');
+$messages.on('click', function() {
  window.location.href = 'chat.html';
 });
