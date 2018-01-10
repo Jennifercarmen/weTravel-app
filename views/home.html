@@ -49,12 +49,12 @@
     </div>
   </nav>
   <hr>
-  <div class="nav-content white">
+  <div class="nav-content">
     <ul class="tabs tabs-transparent">
-      <li class="tab"><a href="home.html"><i class="material-icons">chrome_reader_mode</i></a></li>
-      <li class="tab"><a href="friends.html"><i class="material-icons">person_outline</i></li>
-      <li id="messages"class="tab"><i class="material-icons">message</i></a></li>
-      <li class="tab"><a href="#"><i class="material-icons">notifications_none</i></a></li>
+      <li class="tab"><a href="home.html"><i class="material-icons color-nav">chrome_reader_mode</i></a></li>
+      <li class="tab"><a href="friends.html"><i class="material-icons color-nav">person_outline</i></li>
+      <li id="messages"class="tab"><i class="material-icons color-nav">message</i></a></li>
+      <li class="tab"><a href="#"><i class="material-icons color-nav">notifications_none</i></a></li>
       <a id="post"class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a>
     </ul>
   </div>
@@ -66,8 +66,8 @@
           <div class="col s12">
             <h5 class="font-title">Comparte tu viaje</h5>                      
             <div class="teal lighten-5 style-post">
-              <input type="text" id="message" placeholder="¡Cuéntanos de tu viaje!">
-              <button id="btnEnviar" class="btn waves-effect waves-light size-btn" type="submit" name="action">Publicar
+              <input type="text" id="message" class="validateInput" placeholder="¡Cuéntanos de tu viaje!">
+              <button id="btnEnviar" class="btn waves-effect waves-light size-btn" type="submit" name="action" disabled>Publicar
                 <i class="tiny material-icons right">send</i>
               </button>
             </div>

@@ -188,6 +188,9 @@ a#post {
     width: 100%;
     height: 300px;
 }
+.color-nav {
+    color: black;
+}
 /*----------- post view ------------*/
 .style-post {
     padding: 10px;
