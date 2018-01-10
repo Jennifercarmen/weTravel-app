@@ -1,4 +1,4 @@
-// Initialize Firebase
+﻿// Initialize Firebase
 var config = {
   apiKey: 'AIzaSyDz6Bsp6T9TuR7gYIg5i-tTScsbIFeVyYo',
   authDomain: 'laboratoria-2a397.firebaseapp.com',
@@ -87,7 +87,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '</div>' +
       '</div>' +
       '<div class="row">' +
-      '<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Submit' +
+      '<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Eliminar' +
       '<i class="material-icons right">send</i>' +
       '</button>          </div>' +
       '<div class="row">' +
