@@ -16,13 +16,13 @@ function viewImages() {
     for (var key in datos) {
       result += '<img width="150px" height="120px" src="' + datos[key].url + '"/>';
     }
-    document.getElementById('images-firebase').innerHTML =result;
+    document.getElementById('images-firebase').innerHTML = result;
   });
 }
 function uploadImage() {
   var imageUpload = fichero.files[0];
   var uploadImages = StorageRef.child('images/' + imageUpload.name).put(imageUpload);
-    document.getElementById('progress').className ="";
+  document.getElementById('progress').className = '';
 
   uploadImages.on('state_changed', 
     function(snapshot) {
@@ -34,8 +34,7 @@ function uploadImage() {
       // cuando se ha subido exitosamente
       var downloadURL = uploadImages.snapshot.downloadURL;
       createNodeFirebase(imageUpload.name, downloadURL);
-      document.getElementById('progress').className ="hide";
-
+      document.getElementById('progress').className = 'hide';
     });
 };
 

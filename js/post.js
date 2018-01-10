@@ -50,7 +50,6 @@ $message.on('click', function() {
 
 
 $(document).ready(function() {
- 
   $('.search').keyup(function() {
     var name = $(this).val().toLowerCase();
     $('.collection').hide();

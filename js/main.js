@@ -21,16 +21,16 @@ $inifacebook.on('click', signInFacebook);
 $inigoogle.on('click', signInGoogle);
 function initApp() {
   registrationUsers(user.uid, user.displayName, user.email);
-  login(user.uid, user.displayName ,user.email);
+  login(user.uid, user.displayName , user.email);
   window.location.href = 'home.html';  
 }
-function registrationUsers(uid,name, email) {
+function registrationUsers(uid, name, email) {
   firebase.database().ref('Usuarios/' + uid).set({
     name: name,
     email: email
   });
 }
-function login(uid, name,email) {
+function login(uid, name, email) {
   firebase.database().ref('connected/' + uid).set({
     name: name,
     email: email
@@ -38,9 +38,9 @@ function login(uid, name,email) {
 }
 function signOut() {
   firebase.auth().onAuthStateChanged(function(user) {
-    database.ref('/connected/' +  user.uid).remove();
+    database.ref('/connected/' + user.uid).remove();
     window.location.href = 'main.html';  
-    });
+  });
 };
 function signInFacebook() {
   var provider = new firebase.auth.FacebookAuthProvider();

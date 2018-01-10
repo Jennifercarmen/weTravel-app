@@ -49,7 +49,6 @@ firebase.database().ref('chat').on('value', function(snapshot) {
     var nombre = element.name;
     var mensaje = element.message;
     html += '<div><b>' + nombre + ': </b>' + mensaje + '</div>';
-   
   });
   $($chatUl).append(html);
 }); 
