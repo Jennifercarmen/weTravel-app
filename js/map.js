@@ -1,5 +1,5 @@
 $('select').material_select();
-$types=$('#types');
+$types = $('#types');
 var map;
 var infowindow;
 

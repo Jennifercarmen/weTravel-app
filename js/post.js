@@ -84,10 +84,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
         '</div>' +
       '</div>' +
     '</div>/';
-    var $idbtn = hora + uid;
-    $('#' + $idbtn).on('click', function() {
-      window.location.href = 'chat.html';
-    });
+
   });
 
   $($chatUl).append(html);
@@ -110,7 +107,6 @@ $messages.on('click', function() {
 
 
 $(document).ready(function() {
- 
   $('.search').keyup(function() {
     var name = $(this).val().toLowerCase();
     $('.collection').hide();
