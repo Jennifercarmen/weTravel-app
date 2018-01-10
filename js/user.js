@@ -28,3 +28,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 $('.button-collapse').sideNav();
+
+var $message = $('#message');
+$message.on('click', function() {
+  window.location.href = 'chat.html';
+});

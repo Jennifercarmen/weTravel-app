@@ -37,7 +37,11 @@ firebase.database().ref('post').on('value', function(snapshot) {
   $($chatUl).append(html);
 });
 
+var $message = $('#message');
 
+$message.on('click', function() {
+  window.location.href = 'chat.html';
+});
 /*$('.change_cities').on('click',function() {
   $('.hide').hide();
 });*/
