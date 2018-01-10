@@ -12,7 +12,6 @@ firebase.initializeApp(config);
 /* ------------------------CHAT------------------------------*/
 // Creaciòn de variables tomando el cuenta el id de cada elemento
 var $txtNombre = $('#nombre');
-var $txtMensaje = $('#message');
 var $btnEnviar = $('#btnEnviar');
 var $chatUl = $('#chatUl');
 var $mostrar = $('#mostrar');
@@ -20,11 +19,12 @@ var $cerrar = $('#cerrar');
   
 // Funciòn del evento click, para almacenar los datos en firebase
 $btnEnviar.on('click', function() {
-  var nombre = $txtNombre.val();
-  var mensaje = $txtMensaje.val();
-  firebase.database().ref('chat').push({
-    name: nombre,
-    message: mensaje
+  firebase.auth().onAuthStateChanged(function(user) {
+    firebase.database().ref('chat').push({
+      uid: user.uid,
+      name: user.displayName,
+      message: mensaje
+    });
   });
 });
 // Mustra en pantalla los datos a publicar con los datos almacenados en firebase
