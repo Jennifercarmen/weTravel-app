@@ -24,7 +24,7 @@ Se dividió el trabajo en etapas, las cuales se detallan a continuación:
 
 + En la segunda etapa se definió el framework a utilizar y las tareas de cada integrante.
 
-+ La tercera etapa consistió en realizar el producto final en sí, con todas las herramientas aprendidas en el Bootcamp.
++ La tercera etapa consistió en realizar el producto final en sí, con todas las herramientas aprendidas en el Bootcamp y trabajando colaborativamente en GitHub. 
 
 ## Observaciones
 
