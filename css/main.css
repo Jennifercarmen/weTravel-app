@@ -10,6 +10,11 @@ i.material-icons.delete {
     position: absolute;
     right: 45px;
 }
+ul.users.collection {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 i.material-icons:hover {
   color: #26a69a;
 }
@@ -181,15 +186,15 @@ a#post {
 .center {
     margin-top: 25%;
 }
+.indigo {
+    padding-left: 10px;
+}
 .border {
     border: 2px solid #ffffff;
 }
 #mapa {
     width: 100%;
     height: 300px;
-}
-.color-nav {
-    color: black;
 }
 /*----------- post view ------------*/
 .style-post {

@@ -8,7 +8,21 @@ var config = {
   messagingSenderId: '617399103792'
 };
 firebase.initializeApp(config);
+var $usersconect = $('.users');
 
+// Mustra en pantalla los datos a publicar con los datos almacenados en firebase
+firebase.database().ref('connected').on('value', function(snapshot) {
+  var html = '';
+  snapshot.forEach(function(e) {
+    var element = e.val();
+    var name = element.name;
+    var email = element.email;
+    html += '<li>' +
+      '<img src="../assets/images/active.png" class="responsive-image" alt="active" width="10px">' +
+      ' ' + name + ' </li>';
+  });
+  $($usersconect).append(html);
+});
 
 /* ----------------------Post---------------------------*/
 // Creaciòn de variables tomando el cuenta el id de cada elemento
@@ -25,7 +39,7 @@ $btnEnviar.on('click', function() {
   var hora = f.getHours() + ':' + f.getMinutes();
   firebase.auth().onAuthStateChanged(function(user) {
     firebase.database().ref('post').push({
-  
+
       uid: user.uid,
       photoURL: user.photoURL,
       name: user.displayName,
@@ -51,40 +65,43 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var uid = element.uid;
 
     html += '<div class="post">' +
-    '<div class="tweet-je">' +
+      '<div class="tweet-je">' +
       '<div class="row">' +
-        '<div class="col s3">' +
-            '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
-        '</div>' +
-        '<div class="col s9">' +
-          '<br>' + '<div class="deletepost"><i class="material-icons delete" >delete</i></div>' +
-          '<span class="name_user bold">' + name + '</span>' +
-            '<br>' +
-            '<span class="fecha_post">' +
-                 fecha + ' - ' + hora +
-            '</span>' +
-        '</div>' +
+      '<div class="col s3">' +
+      '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
+      '</div>' +
+      '<div class="col s9">' +
+      '<br>' + '<div class="deletepost"><i class="material-icons delete" >delete</i></div>' +
+      '<span class="name_user bold">' + name + '</span>' +
+      '<br>' +
+      '<span class="fecha_post">' +
+      fecha + ' - ' + hora +
+      '</span>' +
+      '</div>' +
       '</div>' +
       '<div class="row">' +
-        '<div class="col s12"> ' +
-          '<p id="postdesc"> ' +
-                           mensaje +
-          '</p>' +
-        '</div>' +
+      '<div class="col s12"> ' +
+      '<p id="postdesc"> ' +
+      mensaje +
+      '</p>' +
+      '</div>' +
       '</div>' +
       '<div class="row">' +
-'<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Submit' +
-    '<i class="material-icons right">send</i>' +
-  '</button>          </div>' +
+      '<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Submit' +
+      '<i class="material-icons right">send</i>' +
+      '</button>          </div>' +
       '<div class="row">' +
-          '<div class="col s4"><i class="tiny material-icons icon_post">favorite_border</i></div>' +
-          '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
-          '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
-          '</div>' +
-        '</div>' +
+      '<div class="col s4"><i class="tiny material-icons icon_post">favorite_border</i></div>' +
+      '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
+      '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
       '</div>' +
-    '</div>/';
-
+      '</div>' +
+      '</div>' +
+      '</div>/';
+    var $idbtn = hora + uid;
+    $('#' + $idbtn).on('click', function() {
+      window.location.href = 'chat.html';
+    });
   });
 
   $($chatUl).append(html);
@@ -121,5 +138,14 @@ $(document).ready(function() {
 
 
 // filtro por nombre
-     
+
 // .............Fin Filtros................
+
+function signOut() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    firebase.database().ref('/connected/' + user.uid).remove();
+    window.location.href = 'main.html';
+  });
+};
+var $logout = $('.logout');
+$logout.on('click', signOut);
