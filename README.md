@@ -14,7 +14,25 @@ El objetivo es crear una red social exitosa que tenga en cuenta algunos puntos b
 + Capacidad para poder tener amigos y seguir a personas y marcas.
 + Ser mobile friendly, etc.
 
-## Flujo de la aplicación
+## Funcionalidad y flujo de la aplicación
+
++ Vista splash que redirecciona a la vista home
+![Con titulo](assets/images/1.png)
+
++ Al ingresar con Facebook o Google, te redirecciona a la página donde se ven las publicaciones. Éstas se guardan en una base de datos (firebase).
+![Con titulo](assets/images/2.png)
+
++ Vista para subir fotos que también se almacena en una base de datos.
+![Con titulo](assets/images/3.png)
+
++ Chat totalmente funcional.
+![Con titulo](assets/images/4.png)
+
++ Vista donde el viajero busca los lugares que quiere conocer.
+![Con titulo](assets/images/6.png)
+
++ Vista de las opciones de viaje, se consideraron viajes en avión y en bus, además de las promociones por temporada.
+![Con titulo](assets/images/5.png)
 
 ## Planificación
 
