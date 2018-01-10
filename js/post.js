@@ -48,6 +48,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var mensaje = element.message;
     var fecha = element.fecha;
     var hora = element.hora;
+    var uid = element.uid;
+
     html += '<div class="post">' +
     '<div class="tweet-je">' +
       '<div class="row">' +
@@ -55,8 +57,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
             '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
         '</div>' +
         '<div class="col s9">' +
-          '<br>' +
-            '<span class="name_user bold">' + name + '</span>' +
+          '<br>' + '<div class="deletepost"><i class="material-icons delete" >delete</i></div>' +
+          '<span class="name_user bold">' + name + '</span>' +
             '<br>' +
             '<span class="fecha_post">' +
                  fecha + ' - ' + hora +
@@ -71,32 +73,44 @@ firebase.database().ref('post').on('value', function(snapshot) {
         '</div>' +
       '</div>' +
       '<div class="row">' +
+'<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Submit' +
+    '<i class="material-icons right">send</i>' +
+  '</button>          </div>' +
+      '<div class="row">' +
           '<div class="col s4"><i class="tiny material-icons icon_post">favorite_border</i></div>' +
           '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
           '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
           '</div>' +
         '</div>' +
       '</div>' +
-    '</div>';
+    '</div>/';
+    var $idbtn = hora + uid;
+    $('#' + $idbtn).on('click', function() {
+      window.location.href = 'chat.html';
+    });
   });
+
   $($chatUl).append(html);
 });
 
+$('#camino').on('click', function() {
+  window.location.href = 'chat.html';
+});
 var $messages = $('#messages');
 
 $messages.on('click', function() {
   window.location.href = 'chat.html';
 });
+/* $('.change_cities').on('click',function() {
+  $('.hide').hide();
+});*/
+
+// .............Filtros................
+// Filtros del input
+
 
 $(document).ready(function() {
-  function allTravels() {
-    for (i = 0; i < data.length; i++) {
-      container.append('<div class="col-xs-5 col-md-2 box-restaurant collection" data-name="' + data[i].name + '" data-type="' + data[i].type + '" data-city="' + data[i].address + '" data-toggle="modal" data-target="#myModal" ><p class="name-restaurant">' + data[i].name + '</p><img class="img-restaurant"  src=' + data[i].image + '><div class="opacity"></div> </div>');
-    }
-  }
-  // Ejecutando la función al iniciar
-  allTravels();
-
+ 
   $('.search').keyup(function() {
     var name = $(this).val().toLowerCase();
     $('.collection').hide();

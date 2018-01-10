@@ -9,6 +9,13 @@ body {
 
 
 /* Helpers */
+i.material-icons.delete {
+    position: absolute;
+    right: 45px;
+}
+i.material-icons:hover {
+  color: #26a69a;
+}
 .vertical-center {
     display: flex;
     align-items: center;
