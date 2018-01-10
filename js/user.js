@@ -33,3 +33,11 @@ var $message = $('#message');
 $message.on('click', function() {
   window.location.href = 'chat.html';
 });
+var $foto = $('#foto');
+$foto.on('click', function() {
+  window.location.href = 'fotos.html';
+});
+var $viaje= $('#viaje');
+$viaje.on('click', function() {
+  window.location.href = 'viajes.html';
+});

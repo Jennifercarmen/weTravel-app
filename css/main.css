@@ -183,6 +183,9 @@ a#post {
     background-position: center;
     height: 20vh;
 }
+.color-nav{
+    color: black;
+}
 .center {
     margin-top: 25%;
 }
