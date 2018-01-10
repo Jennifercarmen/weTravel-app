@@ -238,10 +238,18 @@ color: #26a69a;
   .tam_chica{
     width: 50px;
   }
-  .call{
+  .call, .close{
     float: right;
     border-radius: 50%;
     padding: 5px;
     border:1px solid wheat;
+    color: black;
+    margin: 5px;
   }
+  .close:hover{
+    color: #2AE7CB;
+    box-shadow: inset 0 0 0 3px #2AE7CB;
+    border:none; 
+  }
+ 
   /*---------------------Fin chat.................*/

@@ -8,45 +8,46 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
-    <div class="row">
-        <div class="col s12 m5">
-            <div class="encabezado">
-                    <img src="../assets/images/chica.png"  class="tam_chica" alt="chica">
-                    <i class="small material-icons call">call</i>
-                    
+<body >
+    <a id="mostrar" href="#">Mostrar Formulario</a>
+    <div id="chat">
+      <div class="row">
+          <div class="col m3"></div>
+        <div class="col s12 m6">
+          <div class="encabezado">
+            <img src="../assets/images/chica.png" class="tam_chica" alt="chica">
+            <a href="#"><i id="cerrar"class="small material-icons close">close</i></a>
+            <i class="small material-icons call">call</i>
+          </div>
+          <div class="chat">
+  
+            <div id="chatUl">
+  
             </div>
-            <div class="chat">
-
-                <div id="chatUl">
-
+            <hr>
+            <div class="center-align bg_color">
+              <form action="">
+                <div>
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" class="width_nombre">
                 </div>
-                <hr>
-                <div class="center-align bg_color">
-                    <form action="">
-                        <div>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" class="width_nombre">
-                        </div>
-                        <div class="row">
-                            <div class="col s12 m9">
-                                <!--                                 <label for="mensaje">Mensaje</label>
- -->
-                                <!--                                 <input type="text" id="message" placeholder="Escriba su mensaje y presione el boton">
- --><textarea type="text" id="message" style="overflow-y:hidden" placeholder="Escriba su mensaje y presione el boton"></textarea>
-                            </div>
-                            <div class="col m1">
-                                <button id="btnEnviar" class="btn waves-effect waves-light" type="submit" name="action">
-                            <i class="material-icons right">send</i>
-                          </button></div>
-                        </div>
-                    </form>
-
+                <div class="row">
+                  <div class="col s12 m9">
+                    <textarea type="text" id="message" style="overflow-y:hidden" placeholder="Escriba su mensaje y presione el boton"></textarea>
+                  </div>
+                  <div class="col m1">
+                    <button id="btnEnviar" class="btn waves-effect waves-light" type="submit" name="action">
+                              <i class="material-icons right">send</i>
+                            </button></div>
                 </div>
-
+              </form>
+  
             </div>
-
+  
+          </div>
+  
         </div>
+      </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
