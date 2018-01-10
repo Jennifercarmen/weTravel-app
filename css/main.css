@@ -14,13 +14,14 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 nav {
     color: #251f1fa8;
 }
 nav .input-field label i {
     color: #251f1fa8;
 }
-v .input-field label.active i {
+#search {
     color: #251f1fa8;
 }
 .bold {
@@ -86,13 +87,13 @@ v .input-field label.active i {
 .vertical {
     margin-top: 30vh;
 }
-
-/*KARINA*/
 .color_h2{
 color: #26a69a; 
 }
-
-
+/* Home */
+a#post {
+    margin-right: 20px;
+}
 /*--------- view home --------*/
 .bg-image {
     background-image: url('../assets/images/quito.jpg');
@@ -211,6 +212,23 @@ color: #26a69a;
 }
 .icon_post {
     margin: 3px 5px;
+}
+.tweet-je i.tiny {
+    font-size: 18px;
+}
+/* Post */
+.tweet-je {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.post {
+    background-color: #2d2b2b57;
+    padding-bottom: 1px;
+}
+.icons{
+    margin-top: 140px;
 }
 /*---------------------chat.................*/
 

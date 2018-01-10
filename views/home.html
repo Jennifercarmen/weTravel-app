@@ -42,7 +42,7 @@
       <form>
         <div class="input-field">
           <input id="search" type="search" required placeholder="Busca">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <label class="label-icon" for="search"><i class="material-icons" id="search">search</i></label>
           <i class="material-icons">close</i>
         </div>
       </form>
@@ -53,7 +53,7 @@
     <ul class="tabs tabs-transparent">
       <li class="tab"><i class="material-icons">chrome_reader_mode</i></li>
       <li class="tab"><i class="material-icons">person_outline</i></li>
-      <li id="message"class="tab"><i class="material-icons">message</i></li>
+      <li id="messages"class="tab"><i class="material-icons">message</i></li>
       <li class="tab"><i class="material-icons">notifications_none</i></li>
       <a id="post"class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a>
     </ul>
@@ -73,7 +73,8 @@
             </div>
           </div>
         </form>
-      </div>    
+      </div> 
+  
       <div id="chatUl"></div>
       </div>
   </div>
@@ -81,13 +82,10 @@
   <!-- Materialize  Jquery JavaScript Firebase-->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-  <script src="../vendors/js/jquery.min.js"></script>
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/post.js"></script>
-  <script src="../js/main.js"></script>  
-  <script src="../js/main.js"></script>
-  <script src="../js/home.js"></script>
-  
+  <script type="text/javascript" src="../js/home.js"></script>  
+
 </body>
 
 </html>

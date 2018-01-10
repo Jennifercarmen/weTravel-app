@@ -29,7 +29,7 @@ var $btnEnviar = $('#btnEnviar');
 var $chatUl = $('#chatUl');
 var $mostrar = $('#mostrar');
 var $cerrar = $('#cerrar');
-  
+
 // Funciòn del evento click, para almacenar los datos en firebase
 $btnEnviar.on('click', function() {
   var mensaje = $txtMensaje.val();
@@ -49,10 +49,9 @@ firebase.database().ref('chat').on('value', function(snapshot) {
     var nombre = element.name;
     var mensaje = element.message;
     html += '<div><b>' + nombre + ': </b>' + mensaje + '</div>';
-   
   });
   $($chatUl).append(html);
-}); 
+});
 // Mostrar el chat
 $mostrar.on('click', function() {
   $('#chat').fadeIn(600);

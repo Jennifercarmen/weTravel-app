@@ -1,8 +1,8 @@
 $('.button-collapse').sideNav();
 // llamamos al chat
-var $message = $('#message');
+var $messages = $('#messages');
 var $post = $('#post');
-$message.on('click', function() {
+$messages.on('click', function() {
   window.location.href = 'chat.html';
 });
 $post.on('click', function() {

@@ -19,8 +19,21 @@ var $chatUl = $('#chatUl');
 // Funciòn del evento click, para almacenar los datos en firebase
 $btnEnviar.on('click', function() {
   var mensaje = $txtMensaje.val();
-  firebase.database().ref('post').push({
-    message: mensaje
+  var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+  var f = new Date();
+  var fecha = f.getDate() + ' de ' + meses[f.getMonth()] + ' de ' + f.getFullYear();
+  var hora = f.getHours() + ':' + f.getMinutes();
+  firebase.auth().onAuthStateChanged(function(user) {
+    firebase.database().ref('post').push({
+  
+      uid: user.uid,
+      photoURL: user.photoURL,
+      name: user.displayName,
+      message: mensaje,
+      email: user.email,
+      fecha: fecha,
+      hora: hora
+    });
   });
 });
 
@@ -29,19 +42,74 @@ firebase.database().ref('post').on('value', function(snapshot) {
   var html = '';
   snapshot.forEach(function(e) {
     var element = e.val();
-
+    var photoURL = element.photoURL;
+    var name = element.name;
+    var email = element.email;
     var mensaje = element.message;
-    html += '<div class="div_color">' + mensaje + '<div class="style_icons">' +'<i class="tiny material-icons icon_post">favorite_border</i>' + '<i class="tiny material-icons icon_post">message</i>' + '<i class="tiny material-icons icon_post">share</i>'+ '</div>' + '</div>';
-    
+    var fecha = element.fecha;
+    var hora = element.hora;
+    html += '<div class="post">' +
+    '<div class="tweet-je">' +
+      '<div class="row">' +
+        '<div class="col s3">' +
+            '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
+        '</div>' +
+        '<div class="col s9">' +
+          '<br>' +
+            '<span class="name_user bold">' + name + '</span>' +
+            '<br>' +
+            '<span class="fecha_post">' +
+                 fecha + ' - ' + hora +
+            '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="row">' +
+        '<div class="col s12"> ' +
+          '<p id="postdesc"> ' +
+                           mensaje +
+          '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div class="row">' +
+          '<div class="col s4"><i class="tiny material-icons icon_post">favorite_border</i></div>' +
+          '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
+          '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
   });
   $($chatUl).append(html);
 });
 
-var $message = $('#message');
+var $messages = $('#messages');
 
-$message.on('click', function() {
+$messages.on('click', function() {
   window.location.href = 'chat.html';
 });
-/*$('.change_cities').on('click',function() {
-  $('.hide').hide();
-});*/
+
+$(document).ready(function() {
+  function allTravels() {
+    for (i = 0; i < data.length; i++) {
+      container.append('<div class="col-xs-5 col-md-2 box-restaurant collection" data-name="' + data[i].name + '" data-type="' + data[i].type + '" data-city="' + data[i].address + '" data-toggle="modal" data-target="#myModal" ><p class="name-restaurant">' + data[i].name + '</p><img class="img-restaurant"  src=' + data[i].image + '><div class="opacity"></div> </div>');
+    }
+  }
+  // Ejecutando la función al iniciar
+  allTravels();
+
+  $('.search').keyup(function() {
+    var name = $(this).val().toLowerCase();
+    $('.collection').hide();
+    $('.collection').each(function() {
+      var search = $(this).text();
+      if (search.indexOf(name) !== -1) {
+        $(this).show();
+      }
+    });
+  });
+});
+
+
+// filtro por nombre
+     
+// .............Fin Filtros................
