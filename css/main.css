@@ -14,7 +14,15 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+nav {
+    color: #251f1fa8;
+}
+nav .input-field label i {
+    color: #251f1fa8;
+}
+v .input-field label.active i {
+    color: #251f1fa8;
+}
 .bold {
     font-weight: bold;
 }
