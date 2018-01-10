@@ -36,3 +36,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
   });
   $($chatUl).append(html);
 });
+
+
+/*$('.change_cities').on('click',function() {
+  $('.hide').hide();
+});*/
