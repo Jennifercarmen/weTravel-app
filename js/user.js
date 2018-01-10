@@ -26,7 +26,21 @@ firebase.auth().onAuthStateChanged(function(user) {
     // ...
   }
 });
+var $usersconect = $('.users');
 
+// Mustra en pantalla los datos a publicar con los datos almacenados en firebase
+firebase.database().ref('connected').on('value', function(snapshot) {
+  var html = '';
+  snapshot.forEach(function(e) {
+    var element = e.val();
+    var name = element.name;
+    var email = element.email;
+    html += '<li>' +
+      '<img src="../assets/images/active.png" class="responsive-image" alt="active" width="10px">' +
+      ' ' + name + ' </li>';
+  });
+  $($usersconect).append(html);
+});
 $('.button-collapse').sideNav();
 
 var $message = $('#message');
