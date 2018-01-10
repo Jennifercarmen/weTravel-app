@@ -13,6 +13,7 @@
     <title>Cities</title>
 </head>
 <body>
+  
   <nav class="nav-extended">
     <div class="nav-wrapper teal">
       <a href="#" class="brand-logo">Travel</a>
@@ -35,18 +36,7 @@
       </ul>
     </div>
   </nav>
-  <nav>
-    <div class="nav-wrapper grey lighten-5">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required placeholder="Busca">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-    </div>
-  </nav>
-  <hr>
+   
   <div class="nav-content white">
     <ul class="tabs tabs-transparent">
       <li class="tab"><i class="material-icons">chrome_reader_mode</i></li>
@@ -56,21 +46,32 @@
       <a class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a>
     </ul>
   </div>
+  <nav>
+      <div class="nav-wrapper grey lighten-5">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" class="search" required placeholder="Busca">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
   <br>
-  <div class="">
+  <div class="container">
     <div class="row">
-      <div class="col s6 bg-image grey-text text-lighten-5 border"><p class="center">Quito</p></div>
-      <div class="col s6 bg-image1 grey-text text-lighten-5 border"><p class="center">Santiago</p></div>
-      <div class="col s6 bg-image2 grey-text text-lighten-5 border"><p class="center">Paris</p></div>
-      <div class="col s6 bg-image3 grey-text text-lighten-5 border"><p class="center">Madrid</p></div>
-      <div class="col s6 bg-image4 grey-text text-lighten-5 border"><p class="center">Roma</p></div>
-      <div class="col s6 bg-image5 grey-text text-lighten-5 border"><p class="center">Cuzco</p></div>
-      <div class="col s6 bg-image6 grey-text text-lighten-5 border"><p class="center">Tokyo</p></div>
-      <div class="col s6 bg-image7 grey-text text-lighten-5 border"><p class="center">Seoul</p></div>
-      <div class="col s6 bg-image8 grey-text text-lighten-5 border"><p class="center">Rio de Janeiro</p></div>
-      <div class="col s6 bg-image9 grey-text text-lighten-5 border"><p class="center">London</p></div>
-      <div class="col s6 bg-image10 grey-text text-lighten-5 border"><p class="center">México</p></div>
-      <div class="col s6 bg-image11 grey-text text-lighten-5 border"><p class="center">Buenos Aires</p></div>
+      <div class="col s6 bg-image grey-text text-lighten-5 border collection" data-name="quito" ><p class="center">Quito</p></div>
+      <div class="col s6 bg-image1 grey-text text-lighten-5 border collection" data-name="santiago"><p class="center">Santiago</p></div>
+      <div class="col s6 bg-image2 grey-text text-lighten-5 border collection" data-name="paris"><p class="center">Paris</p></div>
+      <div class="col s6 bg-image3 grey-text text-lighten-5 border collection" data-name="madrid"><p class="center">Madrid</p></div>
+      <div class="col s6 bg-image4 grey-text text-lighten-5 border collection" data-name="roma"><p class="center">Roma</p></div>
+      <div class="col s6 bg-image5 grey-text text-lighten-5 border collection" data-name="cuzco"><p class="center">Cuzco</p></div>
+      <div class="col s6 bg-image6 grey-text text-lighten-5 border collection" data-name="tokyo"><p class="center">Tokyo</p></div>
+      <div class="col s6 bg-image7 grey-text text-lighten-5 border collection" data-name="seoul"><p class="center">Seoul</p></div>
+      <div class="col s6 bg-image8 grey-text text-lighten-5 border collection" data-name="rio de janeiro"><p class="center">Rio de Janeiro</p></div>
+      <div class="col s6 bg-image9 grey-text text-lighten-5 border collection" data-name="london"><p class="center">London</p></div>
+      <div class="col s6 bg-image10 grey-text text-lighten-5 border collection" data-name="méxico"><p class="center">México</p></div>
+      <div class="col s6 bg-image11 grey-text text-lighten-5 border collection" data-name="buenos aires"><p class="center">Buenos Aires</p></div>
     </div>
   </div>
  
@@ -81,6 +82,7 @@
   <script type="text/javascript" src="../js/post.js"></script>
   <script src="../js/main.js"></script>  
   <script src="../js/home.js"></script>
+  <script src="../js/data.js"></script>
   
 </body>
 

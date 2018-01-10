@@ -31,8 +31,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var element = e.val();
 
     var mensaje = element.message;
-    html += '<div class="div_color">' + mensaje + '<div class="style_icons">' +'<i class="tiny material-icons icon_post">favorite_border</i>' + '<i class="tiny material-icons icon_post">message</i>' + '<i class="tiny material-icons icon_post">share</i>'+ '</div>' + '</div>';
-    
+    html += '<div class="div_color">' + mensaje + '<div class="style_icons">' + '<i class="tiny material-icons icon_post">favorite_border</i>' + '<i class="tiny material-icons icon_post">message</i>' + '<i class="tiny material-icons icon_post">share</i>' + '</div>' + '</div>';
   });
   $($chatUl).append(html);
 });
@@ -42,6 +41,29 @@ var $message = $('#message');
 $message.on('click', function() {
   window.location.href = 'chat.html';
 });
-/*$('.change_cities').on('click',function() {
+/* $('.change_cities').on('click',function() {
   $('.hide').hide();
 });*/
+
+// .............Filtros................
+// Filtros del input
+
+
+$(document).ready(function() {
+ 
+  $('.search').keyup(function() {
+    var name = $(this).val().toLowerCase();
+    $('.collection').hide();
+    $('.collection').each(function() {
+      var search = $(this).text();
+      if (search.indexOf(name) !== -1) {
+        $(this).show();
+      }
+    });
+  });
+});
+
+
+// filtro por nombre
+     
+// .............Fin Filtros................
