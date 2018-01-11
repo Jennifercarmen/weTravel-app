@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var $usersconect = $('.users');
 
-// Mustra en pantalla los datos a publicar con los datos almacenados en firebase
+// Muestra en pantalla los datos a publicar con los datos almacenados en firebase
 firebase.database().ref('connected').on('value', function(snapshot) {
   var html = '';
   snapshot.forEach(function(e) {
@@ -63,7 +63,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var fecha = element.fecha;
     var hora = element.hora;
     var uid = element.uid;
-
+    //  eliminamos el botón ELIMINAR porque ya existe un ícono de tachito tbn para borrar =)
     html += '<div class="post">' +
       '<div class="tweet-je">' +
       '<div class="row">' +
@@ -87,7 +87,6 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '</div>' +
       '</div>' +
       '<div class="row">' +
-      '<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Eliminar' +
       '<i class="material-icons right">send</i>' +
       '</button>          </div>' +
       '<div class="row">' +
@@ -147,7 +146,7 @@ function signOut() {
 var $logout = $('.logout');
 $logout.on('click', signOut);
 
-//---------------------Enlaces------------------
+//  ---------------------Enlaces------------------
 var $foto = $('#foto');
 $foto.on('click', function() {
   window.location.href = 'fotos.html';

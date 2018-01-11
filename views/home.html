@@ -6,39 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>    
+    <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <title>Home</title>
 </head>
 
 <body>
+  <!-Mejoramos la cabecera para que tbn se vea bien en celulares->>
   <nav class="nav-extended">
     <div class="nav-wrapper teal">
       <a href="#" class="brand-logo">Travel</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="user.html">Perfil</a></li>
-        <li><a href="#">Viajes</a></li>
-        <li><a href="home.html">Inicio</a></li>
+        <li><a href="viajes.html">Viajes</a></li>
+        <li><a href="home.html">Amigos</a></li>
         <li><a href="fotos.html">Fotos</a></li>
-        <div id="app" class="row">
-          <div class="col-md-3 col-xs-12">
-            <div class="box">
-              <div class="indigo white-text users-js">
-                Usuarios conectados
-              </div>
-              <ul class="users collection"></ul>
-            </div>
-          </div>
-        </div>        <li><a class="logout">Cerrar Sesión</a></li>
+        <li><a href="#">Viajes Propuestos</a></li>
+        <li><a class="logout">Cerrar Sesión</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="user.html"><i class="material-icons">account_circle</i>Perfil</a></li>
-        <li><a href="viajes.html"><i class="material-icons">image</i>Viajes</a></li>
-        <li><a href="home.html"><i class="material-icons">face</i>Inicio</a></li>
+        <li id="viajes"><a href="viajes.html"><i class="material-icons">image</i>Viajes</a></li>
+        <li><a href="home.html"><i class="material-icons">face</i>Amigos</a></li>
         <li id="foto"><a href="fotos.html"><i class="material-icons">local_see</i>Fotos</a></li>
         <div id="app" class="row">
           <div class="col-md-3 col-xs-12">
@@ -50,7 +43,7 @@
             </div>
           </div>
         </div>
-              <li><a class="logout"><i class="material-icons">close</i>Cerrar Sesión</a></li>
+        <li><a class="logout"><i class="material-icons">close</i>Cerrar Sesión</a></li>
       </ul>
     </div>
   </nav>
@@ -58,21 +51,20 @@
     <div class="nav-wrapper grey lighten-5">
       <form>
         <div class="input-field">
-          <input id="search" type="search" required placeholder="Busca">
+          <input id="search" type="search" class="search" required placeholder="Busca">
           <label class="label-icon" for="search"><i class="material-icons" id="search">search</i></label>
           <i class="material-icons">close</i>
         </div>
       </form>
     </div>
   </nav>
-  <hr>
-  <div class="nav-content">
-    <ul class="tabs tabs-transparent">
-      <li id="publication"class="tab"><a href="home.html"><i class="material-icons color-nav">chrome_reader_mode</i></a></li>
-      <li class="tab"><a href="friends.html"><i class="material-icons color-nav">person_outline</i></li>
-      <li id="messages"class="tab"><i class="material-icons color-nav">message</i></a></li>
-      <li id="notification" class="tab"><a href="#"><i class="material-icons color-nav">notifications_none</i></a></li>
-      <a id="post"class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a>
+  <div class="nav-content white">
+    <ul class="tabs tabs-transparent row">
+      <li id ="publication"class="tab col l2 offset-l1"><i class="material-icons">chrome_reader_mode</i></li>
+      <li class="tab col l2"><i class="material-icons">person_outline</i></li>
+      <li id="message"class="tab col l2"><i class="material-icons">message</i></li>
+      <li class="tab col l2"><i class="material-icons">notifications_none</i></li>
+      <li class="col l2"><a id="post"class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a></li>
     </ul>
   </div>
   <br>
@@ -81,7 +73,7 @@
       <div class="center-align">
         <form action="" class="row">
           <div class="col s12">
-            <h5 class="font-title">Comparte tu viaje</h5>                      
+            <h5 class="font-title">Comparte tu viaje</h5>
             <div class="teal lighten-5 style-post">
               <input type="text" id="message" class="validateInput" placeholder="¡Cuéntanos de tu viaje!">
               <button id="btnEnviar" class="btn waves-effect waves-light size-btn" type="submit" name="action" disabled>Publicar
@@ -90,17 +82,17 @@
             </div>
           </div>
         </form>
-      </div> 
+      </div>
       <div id="chatUl"></div>
       </div>
   </div>
- 
+
   <!-- Materialize  Jquery JavaScript Firebase-->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/post.js"></script>
-  <script type="text/javascript" src="../js/home.js"></script>  
+  <script type="text/javascript" src="../js/home.js"></script>
 
 </body>
 

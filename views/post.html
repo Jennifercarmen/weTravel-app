@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>    
+    <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <title>Cities</title>
 </head>
 <body>
-  
   <nav class="nav-extended">
     <div class="nav-wrapper teal">
       <a href="#" class="brand-logo">Travel</a>
@@ -40,12 +39,12 @@
               <ul class="users collection"></ul>
             </div>
           </div>
-        </div> 
+        </div>
         <li><a class="logout"><i class="material-icons">close</i>Cerrar Sesión</a></li>
       </ul>
     </div>
   </nav>
-   
+
   <div class="nav-content white">
     <ul class="tabs tabs-transparent">
       <li id="publication" class="tab"><i class="material-icons">chrome_reader_mode</i></li>
@@ -55,43 +54,44 @@
     </ul>
   </div>
   <nav>
-      <div class="nav-wrapper grey lighten-5">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" class="search" required placeholder="Busca">
-            <label class="label-icon" for="search"><i class="material-icons" id="search">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-    </nav>
+    <div class="nav-wrapper grey lighten-5">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" class="search" required placeholder="Busca">
+          <label class="label-icon" for="search"><i class="material-icons" id="search">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
   <br>
   <div class="container">
     <div class="row">
-      <div class="col s6 bg-image grey-text text-lighten-5 border collection" data-name="quito" ><p class="center">Quito</p></div>
-      <div class="col s6 bg-image1 grey-text text-lighten-5 border collection" data-name="santiago"><p class="center">Santiago</p></div>
-      <div class="col s6 bg-image2 grey-text text-lighten-5 border collection" data-name="paris"><p class="center">Paris</p></div>
-      <div class="col s6 bg-image3 grey-text text-lighten-5 border collection" data-name="madrid"><p class="center">Madrid</p></div>
-      <div class="col s6 bg-image4 grey-text text-lighten-5 border collection" data-name="roma"><p class="center">Roma</p></div>
-      <div class="col s6 bg-image5 grey-text text-lighten-5 border collection" data-name="cuzco"><p class="center">Cuzco</p></div>
-      <div class="col s6 bg-image6 grey-text text-lighten-5 border collection" data-name="tokyo"><p class="center">Tokyo</p></div>
-      <div class="col s6 bg-image7 grey-text text-lighten-5 border collection" data-name="seoul"><p class="center">Seoul</p></div>
-      <div class="col s6 bg-image8 grey-text text-lighten-5 border collection" data-name="rio de janeiro"><p class="center">Rio de Janeiro</p></div>
-      <div class="col s6 bg-image9 grey-text text-lighten-5 border collection" data-name="london"><p class="center">London</p></div>
-      <div class="col s6 bg-image10 grey-text text-lighten-5 border collection" data-name="méxico"><p class="center">México</p></div>
-      <div class="col s6 bg-image11 grey-text text-lighten-5 border collection" data-name="buenos aires"><p class="center">Buenos Aires</p></div>
+    <!-Agregamos una clase general para las imágenes (ver main.css)->>
+      <div class="col s6 bg-image-main bg-image grey-text text-lighten-5 border collection" data-name="quito" ><p class="center">Quito</p></div>
+      <div class="col s6 bg-image-main bg-image1 grey-text text-lighten-5 border collection" data-name="santiago"><p class="center">Santiago</p></div>
+      <div class="col s6 bg-image-main bg-image2 grey-text text-lighten-5 border collection" data-name="paris"><p class="center">Paris</p></div>
+      <div class="col s6 bg-image-main bg-image3 grey-text text-lighten-5 border collection" data-name="madrid"><p class="center">Madrid</p></div>
+      <div class="col s6 bg-image-main bg-image4 grey-text text-lighten-5 border collection" data-name="roma"><p class="center">Roma</p></div>
+      <div class="col s6 bg-image-main bg-image5 grey-text text-lighten-5 border collection" data-name="cuzco"><p class="center">Cuzco</p></div>
+      <div class="col s6 bg-image-main bg-image6 grey-text text-lighten-5 border collection" data-name="tokyo"><p class="center">Tokyo</p></div>
+      <div class="col s6 bg-image-main bg-image7 grey-text text-lighten-5 border collection" data-name="seoul"><p class="center">Seoul</p></div>
+      <div class="col s6 bg-image-main bg-image8 grey-text text-lighten-5 border collection" data-name="rio de janeiro"><p class="center">Rio de Janeiro</p></div>
+      <div class="col s6 bg-image-main bg-image9 grey-text text-lighten-5 border collection" data-name="london"><p class="center">London</p></div>
+      <div class="col s6 bg-image-main bg-image10 grey-text text-lighten-5 border collection" data-name="méxico"><p class="center">México</p></div>
+      <div class="col s6 bg-image-main bg-image11 grey-text text-lighten-5 border collection" data-name="buenos aires"><p class="center">Buenos Aires</p></div>
     </div>
   </div>
- 
+
   <!-- Materialize  Jquery JavaScript -->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="../vendors/js/jquery.min.js"></script>
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/post.js"></script>
-  <script src="../js/main.js"></script>  
+  <script src="../js/main.js"></script>
   <script src="../js/home.js"></script>
   <script src="../js/data.js"></script>
-  
+
 </body>
 
 </html>
