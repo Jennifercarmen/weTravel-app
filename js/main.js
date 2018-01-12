@@ -50,7 +50,7 @@ function signInFacebook() {
     initApp();
   }).catch(function(error) {
     var errorCode = error.code;
-    console.log(errorcode);
+    console.log(errorCode);
     var errorMessage = errorMessage;
     console.log(errorMessage);
     var email = error.email;
