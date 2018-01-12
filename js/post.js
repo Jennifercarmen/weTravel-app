@@ -95,6 +95,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
       '</div>' +
       '</div>' +
+      '<div class="' + e.key + '  teal"></div>'+
       '</div>' +
       '</div>/';
   });
@@ -105,16 +106,28 @@ firebase.database().ref('post').on('value', function(snapshot) {
     console.log(keypost);
     $('#modal2').modal('open');
     $('#deletepost').on('click', function() {
-      var keyp = $('.this').data("id");
       console.log(keypost);
       firebase.database().ref('/post/' + keypost).remove();
       window.location.href = 'home.html';   
     });
   });
   $('.comment').on('click', function() {
-    var keypost = $(this).data("key");
-    console.log(keypost);
+    $('textarea').val('')
+    var keycomment = '';
+    
+    keycomment = $(this).data("key");
+    console.log(keycomment);
     $('#modal3').modal('open');
+    $('#commentpost').on('click', function() {
+      console.log(keycomment);
+      var comentario = '';
+    comentario += '<p>' +
+    $('#textarea1').val() +
+    '</p>';
+    $('.' + keycomment).append(comentario);
+    $('#modal3').modal('close');
+
+    });
 
   });
 });
