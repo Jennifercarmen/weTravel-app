@@ -81,7 +81,8 @@
       <div class="center-align">
         <form action="" class="row">
           <div class="col s12">
-            <h5 class="font-title">Comparte tu viaje</h5>                      
+            <h5 class="font-title">Comparte tu viaje</h5>  
+                                
             <div class="teal lighten-5 style-post">
               <input type="text" id="message" class="validateInput" placeholder="¡Cuéntanos de tu viaje!">
               <button id="btnEnviar" class="btn waves-effect waves-light size-btn" type="submit" name="action" disabled>Publicar
@@ -94,7 +95,37 @@
       <div id="chatUl"></div>
       </div>
   </div>
- 
+  <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal open">
+    <div class="modal-content">
+      <h4>Mensaje</h4>
+      <p>¿Realmente desea eliminar su post?</p>
+    </div>
+    <div class="modal-footer">
+      <a id="deletepost" class="modal-action  waves-effect waves-red btn-flat ">Aceptar</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+    </div>
+  </div>
+  <!-- Modal comments -->
+  <div id="modal3" class="modal open">
+    <div class="modal-content">
+        <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Comente</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    <div class="modal-footer">
+      <a id="commentpost" class="modal-action  waves-effect waves-red btn-flat ">Aceptar</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+    </div>
+  </div>
   <!-- Materialize  Jquery JavaScript Firebase-->
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>

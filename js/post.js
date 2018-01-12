@@ -1,4 +1,5 @@
-﻿// Initialize Firebase
+﻿$('.modal').modal();
+// Initialize Firebase
 var config = {
   apiKey: 'AIzaSyDz6Bsp6T9TuR7gYIg5i-tTScsbIFeVyYo',
   authDomain: 'laboratoria-2a397.firebaseapp.com',
@@ -51,10 +52,12 @@ $btnEnviar.on('click', function() {
   });
 });
 
-// Mustra en pantalla los datos a publicar con los datos almacenados en firebase
+
+// Muestra en pantalla los datos a publicar con los datos almacenados en firebase
 firebase.database().ref('post').on('value', function(snapshot) {
   var html = '';
   snapshot.forEach(function(e) {
+    console.log(e.key);
     var element = e.val();
     var photoURL = element.photoURL;
     var name = element.name;
@@ -71,7 +74,7 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
       '</div>' +
       '<div class="col s9">' +
-      '<br>' + '<div class="deletepost"><i class="material-icons delete" >delete</i></div>' +
+      '<br>' + '<div class="deletepost"  ><i  class="material-icons delete" data-id=' + e.key + ' >delete</i></div>' +
       '<span class="name_user bold">' + name + '</span>' +
       '<br>' +
       '<span class="fecha_post">' +
@@ -87,27 +90,37 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '</div>' +
       '</div>' +
       '<div class="row">' +
-      '<button class="btn waves-effect waves-light" id=' + hora + uid + ' >Eliminar' +
-      '<i class="material-icons right">send</i>' +
-      '</button>          </div>' +
-      '<div class="row">' +
-      '<div class="col s4"><i  id="favorite" class="tiny material-icons icon_post">favorite_border</i></div>' +
-      '<div class="col s4"><i class="tiny material-icons icon_post">message</i></div>' +
+      '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
+      '<div class="col s4"><i data-key=' + e.key + ' class="tiny material-icons icon_post comment">message</i></div>' +
       '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
       '</div>' +
       '</div>' +
       '</div>' +
       '</div>/';
-    var $idbtn = hora + uid;
-    $('#' + $idbtn).on('click', function() {
-      window.location.href = 'chat.html';
-    });
   });
 
   $($chatUl).append(html);
+  $('.delete').on('click', function() {
+    var keypost = $(this).data("id");
+    console.log(keypost);
+    $('#modal2').modal('open');
+    $('#deletepost').on('click', function() {
+      var keyp = $('.this').data("id");
+      console.log(keypost);
+      firebase.database().ref('/post/' + keypost).remove();
+      window.location.href = 'home.html';   
+    });
+  });
+  $('.comment').on('click', function() {
+    var keypost = $(this).data("key");
+    console.log(keypost);
+    $('#modal3').modal('open');
+
+  });
 });
 
 var $messages = $('#messages');
+
 
 $messages.on('click', function() {
   window.location.href = 'chat.html';
