@@ -59,3 +59,4 @@ initMap();
 
 
 $types.change(initMap);
+

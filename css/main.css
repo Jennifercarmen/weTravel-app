@@ -280,3 +280,46 @@ input[type=text]:not(.browser-default){
     border:none; 
 } 
   /*---------------------Fin chat.................*/
+
+  /*--------------- desktop view ------------*/
+
+  .margin {
+      margin: 10px;
+  }
+
+  .user-connected {
+      height: 55vh;
+  }
+  .style-chat {
+      padding: 5px;
+  }
+  .estilo-post {
+      outline: 1px solid gray;
+      margin: 3px 0;
+  }
+  .borrar {
+      width: 10px;
+  }
+  .style-maps {
+      padding: 10px;
+  }
+  .size-map {
+      height: 100px;
+      width: 90%;
+  }
+
+  @media (min-width:500px) {
+    .nav-hide {
+        display: none;
+    } 
+  }
+  @media (max-width:500px) {
+      .left-hide {
+          display: none;
+      }
+      .right-hide {
+          display: none;
+      }
+  }
+  /*  -----fin desktop view------  */
+  

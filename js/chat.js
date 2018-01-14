@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 var $txtNombre = $('#nombre');
 var $txtMensaje = $('#message');
 var $btnEnviar = $('#btnEnviar');
-var $chatUl = $('#chatUl');
+var $chatFun = $('#chatFun');
 var $mostrar = $('#mostrar');
 var $cerrar = $('#cerrar');
   
@@ -51,7 +51,7 @@ firebase.database().ref('chat').on('value', function(snapshot) {
     html += '<div><b>' + nombre + ': </b>' + mensaje + '</div>';
    
   });
-  $($chatUl).append(html);
+  $($chatFun).append(html);
 }); 
 // Mostrar el chat
 $mostrar.on('click', function() {

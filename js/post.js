@@ -68,14 +68,15 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var uid = element.uid;
 
     html += '<div class="post">' +
-      '<div class="tweet-je">' +
+      '<div class="tweet-je  estilo-post">' +
       '<div class="row">' +
       '<div class="col s3">' +
       '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
       '</div>' +
       '<div class="col s9">' +
-      '<br>' + '<div class="deletepost"  ><i  class="material-icons delete" data-id=' + e.key + ' >delete</i></div>' +
-      '<span class="name_user bold">' + name + '</span>' +
+      '<br>' + 
+      '<br>' +
+      '<span class="name_user bold">' + name + '</span>' + 
       '<br>' +
       '<span class="fecha_post">' +
       fecha + ' - ' + hora +
