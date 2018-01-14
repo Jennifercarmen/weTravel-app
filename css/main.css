@@ -314,7 +314,7 @@ a#post {
     float: right;
 }
 .icon_post {
-    margin: 3px 5px;
+    margin: 3px 0;
 }
 .tweet-je i.tiny {
     font-size: 18px;
@@ -413,6 +413,7 @@ input[type=text]:not(.browser-default){
           display: none;
       }
   }
+ 
   /*  -----fin desktop view------  */
   
   /*-----------------------Separación---------------------------------*/

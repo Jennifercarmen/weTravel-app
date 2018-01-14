@@ -67,8 +67,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
     var hora = element.hora;
     var uid = element.uid;
 
-    html += '<div class="post">' +
-      '<div class="tweet-je  estilo-post">' +
+    html += '<div class="">' +
+      '<div class="tweet-je border">' +
       '<div class="row">' +
       '<div class="col s3">' +
       '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
@@ -79,8 +79,8 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '<span class="name_user bold">' + name + '</span>' + 
       '<br>' +
       '<span class="fecha_post">' +
-      fecha + ' - ' + hora +
-      '</span>' +
+      fecha + ' - ' + hora + 
+      '</span>' + 
       '</div>' +
       '</div>' +
       '<div class="row">' +
@@ -91,17 +91,20 @@ firebase.database().ref('post').on('value', function(snapshot) {
       '</div>' +
       '</div>' +
       '<div class="row">' +
-      '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
-      '<div class="col s4"><i data-key=' + e.key + ' class="tiny material-icons icon_post comment">message</i></div>' +
-      '<div class="col s4"><i class="tiny material-icons icon_post">share</i>' +
+      '<div class="col s1"><i  class="tiny material-icons icon_post">favorite</i></div>' +
+      '<div class="col s1"><i data-key=' + e.key + ' class="tiny material-icons icon_post comment">message</i></div>' +
+      '<div class="col s1"><i class="tiny material-icons icon_post">camera_alt</i></div>' +
+      '<div class="col s1 offset-s6 offset-m7"><i class="tiny material-icons icon_post">edit</i></div>' +
+      '<div class="col s1"><i class="tiny material-icons icon_post">delete</i></div>' +
       '</div>' +
       '</div>' +
       '<div class="' + e.key + '  teal"></div>'+
       '</div>' +
-      '</div>/';
+      '</div>';
   });
 
   $($chatUl).append(html);
+
   $('.delete').on('click', function() {
     var keypost = $(this).data("id");
     console.log(keypost);
