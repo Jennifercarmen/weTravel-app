@@ -39,6 +39,7 @@ function initMap() {
         }
       }
     });
+    console.log (results[i]);
   });
 }
 
@@ -60,3 +61,10 @@ initMap();
 
 $types.change(initMap);
 
+
+
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+$('.carousel.carousel-slider').carousel({fullWidth: true});

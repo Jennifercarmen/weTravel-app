@@ -6,21 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    
     <!--Import materialize-->
     <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css" media="screen,projection" />
     <link href="../css/main.css" rel="stylesheet">
     <title>Maps</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="row">
-    <h5 class="col s10 offset-s1 offset-l3 l6">Sal a dar un paseo , Tienes muchos lugares hermosos cerca :)</h5>
+    <h5 class="col s10 offset-s1 offset-l3 l6 font">Sal a dar un paseo, tienes muchos lugares hermosos cerca...</h5>
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="../assets/images/ub/c1.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="../assets/images/ub/p1.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="../assets/images/ub/h1.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="../assets/images/ub/c2.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="../assets/images/ub/p2.png"></a>
+      </div>
+      
     <div class="input-field col s10 offset-s1 offset-l3 l6">
       <select id="types">
-        <option value="galería de arte" selected>galería de arte</option>
-        <option value="amusement_park">Parques de diversion</option>
-        <option value="restaurant">Restaurants</option>
+        <option value="galería de arte" selected>Galería de Arte</option>
+        <option value="amusement_park">Parques de Diversión</option>
+        <option value="restaurant">Restaurantes</option>
 
       </select>
     </div>
@@ -28,7 +39,8 @@
 <br>
     <div class="row">
         <div class="col s10 m12 l6 offset-s1 offset-l3">
-            <div id="mapa"> </div>
+          <div class="border_maps">
+            <div id="mapa" class="z-depth-5"> </div></div>
         </div>
     </div>
     <!-- Materialize  Jquery JavaScript -->

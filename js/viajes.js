@@ -23,3 +23,7 @@ var $message = $('#message');
 $message.on('click', function() {
  window.location.href = 'chat.html';
 });
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
