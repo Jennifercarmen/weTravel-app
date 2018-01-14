@@ -1,14 +1,12 @@
 $(document).ready(function() {
+  $('.hidden').hide();
+  $('.hidden-oyp').hide();
 
-    $('.hidden').hide();
-    $('.hidden-oyp').hide();
+  $('.hide-show').click(function() {
+    $('.hidden').toggle();
+  });
 
-    $('.hide-show').click(function() {
-        $('.hidden').toggle();
-    })
-
-    $('.hide-show-oyp').click(function() {
-        $('.hidden-oyp').toggle();
-    })
-
-})
+  $('.hide-show-oyp').click(function() {
+    $('.hidden-oyp').toggle();
+  });
+});

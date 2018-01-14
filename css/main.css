@@ -380,7 +380,7 @@ input[type=text]:not(.browser-default){
   }
 
   .user-connected {
-      height: 55vh;
+      height: 70vh;
   }
   .style-chat {
       padding: 5px;

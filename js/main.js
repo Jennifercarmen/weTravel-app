@@ -22,7 +22,7 @@ $inigoogle.on('click', signInGoogle);
 function initApp() {
   registrationUsers(user.uid, user.displayName, user.email);
   login(user.uid, user.displayName , user.email);
-  window.location.href = 'home.html';  
+  window.location.href = 'desktop.html';  
 }
 function registrationUsers(uid, name, email) {
   firebase.database().ref('Usuarios/' + uid).set({
@@ -66,7 +66,7 @@ function signInGoogle() {
     user = result.user;
     console.log(user);
     initApp();
-    window.location.href = 'home.html';
+    window.location.href = 'desktop.html';
   });
 }
 var $logout = $('.logout');
