@@ -13,86 +13,201 @@
     </head>
     
     <body class="">
-        <nav>
-          <div class="nav-wrapper teal lighten-2">
-            <a href="#!" class="brand-logo">Travel</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="user.html">Perfil</a></li>
-              <li><a href="viajes.html">Viajes</a></li>
-              <li><a href="home.html">Inicio</a></li>
-              <li><a href="fotos.html">Fotos</a></li>
-              <li><a href="#">Viajes Propuestos</a></li>
-              <li><a class="logout">Cerrar Sesión</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="user.html"><i class="material-icons">account_circle</i>Perfil</a></li>
-              <li id="viajes"><a href="#"><i class="material-icons">image</i>Viajes</a></li>
-              <li><a href="home.html"><i class="material-icons">face</i>Inicio</a></li>
-              <li id="foto"><a href="fotos.html"><i class="material-icons">local_see</i>Fotos</a></li>
-              <div id="app" class="row">
-                <div class="col-md-3 col-xs-12">
-                  <div class="box">
-                    <div class="indigo white-text users-js">
-                      Usuarios conectados
-                    </div>
-                    <ul class="users collection"></ul>
-                  </div>
-                </div>
-              </div> 
-              <li><a class="logout"><i class="material-icons">close</i>Cerrar Sesión</a></li>
-            </ul>
-          </div>
-        </nav>
-        <br>       
-        <div class="container">
-            <div class="row">
-                <img id="img-user" class="responsive-img col s6 offset-s3 circle" alt="">
-            </div>
-            <div class="row">
-              <h6 class="center-align bold" id="name-user"></h6>
-            </div>
-        </div>
-   
-        <ul class="collapsible" data-collapsible="accordion">
+      <nav>
+        <div class="nav-wrapper teal lighten-2">
+          <a href="#!" class="brand-logo">Travel</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
             <li>
-              <div class="collapsible-header">
-                <i class="material-icons">place</i>
-                <a  href="maps.html">
-                Sal de paseo</a>
-              </div>
+              <a href="user.html">Perfil</a>
             </li>
             <li>
-              <div class="collapsible-header">
-                <i class="material-icons">business</i>
-                Job
-              </div>
-            </li>
-            <li id = 'viaje'>
-                <div class="collapsible-header">
-                  <i class="material-icons">favorite</i>
-                  Estilo de viaje
-                </div>
+              <a href="viajes.html">Viajes</a>
             </li>
             <li>
-                <div class="collapsible-header">
-                  <i class="material-icons">face</i>
-                  Amigos
-                </div>
+              <a href="home.html">Inicio</a>
             </li>
-            <li id="foto">
-                <div class="collapsible-header">
-                  <i class="material-icons">linked_camera</i>
-                  Fotos
-                </div>
+            <li>
+              <a href="fotos.html">Fotos</a>
             </li>
-            <li id = 'message'>
-                <div class="collapsible-header">
-                  <i  class="material-icons">chat</i>
-                  Iniciar Chat
-                </div>
+            <li>
+              <a href="#">Viajes Propuestos</a>
+            </li>
+            <li>
+              <a class="logout">Cerrar Sesión</a>
             </li>
           </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <a href="user.html">
+                <i class="material-icons">account_circle</i>Perfil</a>
+            </li>
+            <li id="viajes">
+              <a href="#">
+                <i class="material-icons">image</i>Viajes</a>
+            </li>
+            <li>
+              <a href="home.html">
+                <i class="material-icons">face</i>Inicio</a>
+            </li>
+            <li id="foto">
+              <a href="fotos.html">
+                <i class="material-icons">local_see</i>Fotos</a>
+            </li>
+            <div id="app" class="row">
+              <div class="col-md-3 col-xs-12">
+                <div class="box">
+                  <div class="indigo white-text users-js">
+                    Usuarios conectados
+                  </div>
+                  <ul class="users collection"></ul>
+                </div>
+              </div>
+            </div>
+            <li>
+              <a class="logout">
+                <i class="material-icons">close</i>Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col  s4 offset-s4 m2 offset-m5 ">
+            <img id="img-user" class="responsive-img circle" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <h6 class="center-align bold" id="name-user"></h6>
+        </div>
+      </div>
+    
+    
+    
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3">
+              <a class="active" href="#bibliografia"> BIBLIOGRAFÍA</a>
+            </li>
+            <li class="tab col s3">
+              <a href="#informacion"> INFORMACIÓN</a>
+            </li>
+            <li class="tab col s3">
+              <a href="#fotos">FOTOS</a>
+            </li>
+            <li class="tab col s3">
+              <a href="#amigos">AMIGOS</a>
+            </li>
+          </ul>
+        </div>
+        <div id="bibliografia" class="col s12">
+    
+          <div class="row">
+            <div class="col s12 m8 offset-m2">
+              <form id="formPost"class="col s12 border form_write">
+                <div class="row ">
+                  <div class="input-field col s12 ">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea  id="textAreaPost"class="materialize-textarea textAreaPost" placeholder="¿Qué estas pensando?"></textarea>
+                  </div>
+                </div>
+              </form>
+              <div class=" col s6 left-align">
+                <i class="material-icons pd_left1">favorite</i>
+                <i class="material-icons pd_left">comment</i>
+                <i class="material-icons pd_left">camera_alt</i>
+              </div>
+              <div class=" col s6 right-align">
+                <i class="material-icons ">delete</i>
+                <a id="btnPost" class="waves-effect waves-light btn btn_publicar" type="submit" value="">Publicar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div id="divPost">
+    
+            </div>
+          </div>
+        </div>
+        <div id="informacion" class="col s12">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="col s8 offset-s2">
+                  <div class="input-field col s12 m6">
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Fecha de cumpleaños</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Teléfono:</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Estudia en:</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Lugar de Nacimiento:</label>
+                  </div>
+                </div>
+    
+              </div>
+            </form>
+            <div class="center-align">
+              <a class="waves-effect lwaves-ight btn mg_btn_edit">
+                <i class="material-icons left">edit</i>Editar</a>
+              <a class="waves-effect lwaves-ight btn mg_btn_edit">
+                <i class="material-icons left">save</i>Guardar</a>
+    
+            </div>
+          </div>
+    
+        </div>
+        <div id="fotos" class="col s12">
+          <div class="row">
+            <div class="col s12 m8 offset-m2">
+    
+              <img class="materialboxed margin_photo " data-caption="A picture of a way with a group of trees in a park" width="50%" src="../assets/images/index.jpg">
+    
+              <img class="materialboxed margin_photo" data-caption="A picture of a way with a group of trees in a park" width="50%" src="../assets/images/index.jpg">
+    
+            </div>
+          </div>
+    
+        </div>
+    
+        <div id="amigos" class="col s12">
+          <div class="col s12 m8 offset-m2">
+            <div class="col s12 m12">
+              <h2 class="header">Horizontal Card</h2>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="../assets/images/index.jpg">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">This is a link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+        </div>
+    
+      </div>
+    
         
   
     
