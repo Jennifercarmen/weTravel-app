@@ -11,57 +11,70 @@ function inicializar() {
   viewImages();
 }
 function viewImages() {
-  images.on('value', function(snapshot) {
-    var datos = snapshot.val();
-    var result = '';
-    for (var key in datos) {
-      result += '<img width="150px" height="120px" src="' + datos[key].url + '"/>';
-    }
-    document.getElementById('images-firebase').innerHTML = result;
+
+  firebase.auth().onAuthStateChanged(function (user) {
+    firebase.database().ref('images').on('child_added', function (snapshot) {
+      var result = '';
+      var uiduser = user.uid;
+      var uid = snapshot.val().uid;
+      var ruta = snapshot.val().url;
+      var $boximage = $('#images-firebase');
+      if (uiduser === uid) {
+
+
+        result += '<img width="150px" height="120px" src="' + ruta + '"/>';
+        $boximage.append(result);
+
+      }
+    });
   });
 }
 function uploadImage() {
   var imageUpload = fichero.files[0];
   var uploadImages = StorageRef.child('images/' + imageUpload.name).put(imageUpload);
   document.getElementById('progress').className = '';
-
-  uploadImages.on('state_changed', 
-    function(snapshot) {
+  uploadImages.on('state_changed',
+    function (snapshot) {
       // se va mostrando el progreso de la subida de la imagen
-    }, function(error) {
+    }, function (error) {
       // Gestionar el error si se produce
       alert('Hubo un error');
-    }, function() {
+    }, function () {
       // cuando se ha subido exitosamente
       var downloadURL = uploadImages.snapshot.downloadURL;
-      createNodeFirebase(imageUpload.name, downloadURL);
+      firebase.auth().onAuthStateChanged(function (user) {
+        createNodeFirebase(imageUpload.name, downloadURL, user.uid);
+      });
       document.getElementById('progress').className = 'hide';
     });
 };
 
-function createNodeFirebase(nameImage, downloadURL) {
-  images.push({name: nameImage, 
-    url: downloadURL});
+function createNodeFirebase(nameImage, downloadURL, uid) {
+  images.push({
+    name: nameImage,
+    url: downloadURL,
+    uid: uid
+  });
 }
 //---------------------Enlaces------------------
 var $foto = $('#foto');
-$foto.on('click', function() {
+$foto.on('click', function () {
   window.location.href = 'fotos.html';
 });
 var $notificacion = $('#notification');
-$notificacion.on('click', function() {
+$notificacion.on('click', function () {
   window.location.href = 'viajes.html';
 });
 
 var $publication = $('#publication');
-$publication.on('click', function() {
+$publication.on('click', function () {
   window.location.href = 'home.html';
 });
- var $viajes = $('#viajes');
- $viajes.on('click', function() {
+var $viajes = $('#viajes');
+$viajes.on('click', function () {
   window.location.href = 'viajes.html';
 });
 var $message = $('#message');
-$message.on('click', function() {
- window.location.href = 'chat.html';
+$message.on('click', function () {
+  window.location.href = 'chat.html';
 });
