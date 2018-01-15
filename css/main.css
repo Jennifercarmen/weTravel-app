@@ -474,4 +474,17 @@ input[type=text]:not(.browser-default){
     border-radius: 5px;
     background-color: rgb(239, 240, 240);
 }
+dalpost {
+    height: 100%;
+}
+div#modalpost {
+    height: 100%;
+}
+.teal.lighten-5.style-post {
+    height: 180px;
+}
 /*----------------------Fin de Publicación---------------------------------*/
+/* Extras */
+ul.tabs {
+    overflow: hidden;
+}

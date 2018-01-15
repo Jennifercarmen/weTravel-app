@@ -20,14 +20,15 @@ $inifacebook.on('click', signInFacebook);
 
 $inigoogle.on('click', signInGoogle);
 function initApp() {
-  registrationUsers(user.uid, user.displayName, user.email);
+  registrationUsers(user.uid, user.displayName, user.email,user.photoURL);
   login(user.uid, user.displayName , user.email);
-  window.location.href = 'desktop.html';  
+  window.location.href = 'home.html';  
 }
-function registrationUsers(uid, name, email) {
-  firebase.database().ref('Usuarios/' + uid).set({
+function registrationUsers(uid, name, email,photoURL) {
+    firebase.database().ref('Usuarios/' + uid).set({
     name: name,
-    email: email
+    email: email,
+    photoURL:photoURL
   });
 }
 function login(uid, name, email) {
@@ -66,7 +67,7 @@ function signInGoogle() {
     user = result.user;
     console.log(user);
     initApp();
-    window.location.href = 'desktop.html';
+    window.location.href = 'home.html';
   });
 }
 var $logout = $('.logout');

@@ -12,7 +12,7 @@ $post.on('click', function() {
 $(document).ready(function() {
   var validatePost = false;
 
-  $('#message').on('input', function() {
+  $('#writepost').on('input', function() {
     if ($(this).val()) {
       validatePost = true;
       activeButton();
