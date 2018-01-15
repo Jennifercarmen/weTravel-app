@@ -77,7 +77,7 @@ function postear() {
 };
 
 function viewPost() {
-    if (window.location.href === "https://jennifercarmen.github.io/RED-SOCIAL/views/desktop.html") {
+    if (window.location.href === 'https://jennifercarmen.github.io/RED-SOCIAL/views/desktop.html') {
         firebase.database().ref('post').on('child_added', function (snapshot) {
             var html = '';
             var key = snapshot.key;
@@ -120,7 +120,7 @@ function viewPost() {
                    
                     '</div>' +
                     '<div class="row">' +
-                    '<div class="col s4 like"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
+                    '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
                     '<div class="col s4"><i data-key='+ key +' class="tiny material-icons icon_post comment">message</i></div>' +
                     '<div class="col s4"><i class="tiny material-icons icon_post">share</i></div>' +
                     '</div>' +
@@ -131,18 +131,6 @@ function viewPost() {
 
                 $boxPost.append(html);
             });
-            
-            // ----------------like------------------------------
-  
-                  var $like = $('.like');
-                  var cont = 1;
-                  $like.on('click', function() {
-                    if (cont === 1) {  
-                      $('#totalLike').html('<b>' + cont++ + 'likes' + '</b>');
-                    } else {
-                      $('#totalLike').html('<b>' + cont++ + ' likes' + '</b>');
-                    }
-                  });
             $('.comment').on('click', function () {
                 $('textarea').val('');
                 $(keycomment).val('');
@@ -157,10 +145,87 @@ function viewPost() {
             });
         });
     }
+    else {
+        firebase.auth().onAuthStateChanged(function(user) {
+            var uiduser = user.uid;
+
+       
+      firebase.database().ref('post').on('child_added', function (snapshot) {
+        var html = '';
+        var key = snapshot.key;
+        var mensaje = snapshot.val().message;
+        var fecha = snapshot.val().fecha;
+        var hora = snapshot.val().hora;
+        var uid = snapshot.val().uid;
+        var ruta = snapshot.val().images;
+        var rut=JSON.stringify(ruta, null, ' ');
+        var contact = JSON.parse(rut);
+        var keyimage=(Object.keys(contact));
+        var obth=Object.values(contact[keyimage]);
+        var url=obth[1];                 
+
+            firebase.database().ref('/Usuarios/' + uid).on('value', snap => {
+                name = snap.val().name;
+                photoURL = snap.val().photoURL;
+                if(uiduser===uid){
+                html += '<div class="post">' +
+                    '<div class="tweet-je">' +
+                    '<div class="row">' +
+                    '<div class="col s3">' +
+                    '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
+                    '</div>' +
+                    '<div class="col s9">' +
+                    '<span id="name_user bold">' + name + '</span>' +
+                    
+                    '<br>' +
+                    '<span class="fecha_post">' +
+                    fecha + ' - ' + hora +
+                    '</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col s12"> ' +
+                    '<p id="postdesc"> ' +
+                    mensaje +
+                    '</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
+                    '<div class="col s4"><i data-key='+ key +' class="tiny material-icons icon_post comment">message</i></div>' +
+                    '<div class="col s4"><i class="tiny material-icons icon_post">share</i></div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                    '<div class="col s12"><img class="responsive-img" src='+ url +'></div>' +
+                   
+                    '</div>' +
+                    '<div class="row options">'+
+                    '<div class="col s1 offset-s9 offset-m9"><i class="tiny material-icons icon_post">edit</i></div>' +
+                    '<div class="col s1"><i data-id='+ key +' class="tiny material-icons delete">delete</i></div>' +
+                    '</div>';
+                    '</div>' +
+                    '</div>/';
+                }
+
+                $boxPost.append(html);
+                $('.delete').on('click', function() {
+                    var keypost = $(this).data("id");
+                    console.log(keypost);
+                    $('#modal2').modal('open');
+                    $('#deletepost').on('click', function() {
+                      console.log(keypost);
+                      firebase.database().ref('/post/' + keypost).remove();
+                      window.location.href = 'user.html';   
+                    });
+                  });
+            });
+
+        });
    
+});
+}
 }
 viewPost();
-
 var boxAmigos=$('#amigos');
 
 function viewFriends() {
