@@ -22,7 +22,7 @@ $inigoogle.on('click', signInGoogle);
 function initApp() {
   registrationUsers(user.uid, user.displayName, user.email,user.photoURL);
   login(user.uid, user.displayName , user.email);
-  window.location.href = 'home.html';  
+  window.location.href = 'desktop.html';  
 }
 function registrationUsers(uid, name, email,photoURL) {
     firebase.database().ref('Usuarios/' + uid).set({
