@@ -77,7 +77,7 @@ function postear() {
 };
 
 function viewPost() {
-    if (window.location.href === 'http://localhost:8000/views/home.html') {
+    if (window.location.href === 'https://jennifercarmen.github.io/RED-SOCIAL/views/desktop.html') {
         firebase.database().ref('post').on('child_added', function (snapshot) {
             var html = '';
             var key = snapshot.key;
