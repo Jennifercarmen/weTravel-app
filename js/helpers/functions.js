@@ -120,7 +120,7 @@ function viewPost() {
                    
                     '</div>' +
                     '<div class="row">' +
-                    '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
+                    '<div class="col s4 like"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
                     '<div class="col s4"><i data-key='+ key +' class="tiny material-icons icon_post comment">message</i></div>' +
                     '<div class="col s4"><i class="tiny material-icons icon_post">share</i></div>' +
                     '</div>' +
@@ -131,6 +131,18 @@ function viewPost() {
 
                 $boxPost.append(html);
             });
+            
+            // ----------------like------------------------------
+  
+                  var $like = $('.like');
+                  var cont = 1;
+                  $like.on('click', function() {
+                    if (cont === 1) {  
+                      $('#totalLike').html('<b>' + cont++ + 'likes' + '</b>');
+                    } else {
+                      $('#totalLike').html('<b>' + cont++ + ' likes' + '</b>');
+                    }
+                  });
             $('.comment').on('click', function () {
                 $('textarea').val('');
                 $(keycomment).val('');
