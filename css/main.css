@@ -496,3 +496,11 @@ img.responsive-img, video.responsive-video {
     height: auto;
 }
 }
+
+/* nav */
+.nav-content {
+    background-color: white;
+}
+i.material-icons {
+    color: #544b4b;
+}

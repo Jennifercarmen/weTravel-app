@@ -15,33 +15,36 @@
 <body>
   
   <nav class="nav-extended">
-    <div class="nav-wrapper teal">
+    <div class="nav-wrapper teal darken-1">
       <a href="#" class="brand-logo">Travel</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="user.html">Perfil</a></li>
-        <li><a href="#">Viajes</a></li>
-        <li><a href="#">Amigos</a></li>
-        <li><a href="#">Fotos</a></li>
-        <li><a href="#">Viajes Propuestos</a></li>
-        <li><a class="logout">Cerrar Sesión</a></li>
+        <li><a href="viajes.html">Viajes</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="maps.html">Geolocalización</a></li>
+        <li><a href="desktop.html">Inicio</a></li>
+        <li><a href="fotos.html">Fotos</a></li>
+        <li><a href="main.html">Cerrar Sesión</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="user.html"><i class="material-icons">account_circle</i>Perfil</a></li>
-        <li id="viajes"><a href="#"><i class="material-icons">image</i>Viajes</a></li>
-        <li><a href="#"><i class="material-icons">face</i>Amigos</a></li>
-        <li id="foto"><a href="#"><i class="material-icons">local_see</i>Fotos</a></li>
-        <div id="app" class="row">
-          <div class="col-md-3 col-xs-12">
-            <div class="box">
-              <div class="indigo white-text users-js">
-                Usuarios conectados
-              </div>
-              <ul class="users collection"></ul>
-            </div>
-          </div>
-        </div> 
-        <li><a class="logout"><i class="material-icons">close</i>Cerrar Sesión</a></li>
+        <li><a href="user.html"><i class="material-icons  orange-text text-darken-1">account_circle</i>Perfil</a></li>
+        <li><a href="viajes.html"><i class="material-icons light-blue-text text-darken-3">image</i>Viajes</a></li>
+        <li><a href="desktop.html"><i class="material-icons purple-text">face</i>Inicio</a></li>
+        <li><a href="chat.html"><i class="material-icons light-blue-text text-darken-3">message</i>Chat</a></li>
+        <li><a href="maps.html"><i class="material-icons light-blue-text text-darken-3">language</i>Geolocalización</a></li>
+        <li><a href="fotos.html"><i class="material-icons red-text text-lighten-1">local_see</i>Fotos</a></li>
+        <li class="users-js"><a href="#"><i class="material-icons indigo-text text-darken-2">people</i>Usuarios Conectados</a></li>
+        <ul class="users collection"></ul>
+        <li><a href="main.html"><i class="material-icons grey-text">close</i>Cerrar Sesión</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li id="publication" class="tab"><a href="desktop.html"><i class="material-icons">chrome_reader_mode</i></a></li>
+        <li id="friend"><a href="friends.html"><i class="material-icons">person_outline</i></a></li>
+        <li id ="messages" class="tab"><a href="chat.html"><i class="material-icons">message</i></a></li>
+        <li id="notification" class="tab"><a href="viajes.html"><i class="material-icons">notifications_none</i></a></li>
       </ul>
     </div>
   </nav>

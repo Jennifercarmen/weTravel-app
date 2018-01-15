@@ -1,96 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
+
 <body>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="../vendors/js/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="../vendors/js/jquery.min.js"></script>
   <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="../js/home.js"></script>
 </body>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    
-  <!--Import materialize-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css"  media="screen,projection"/>
-  <link href="../css/main.css" rel="stylesheet">
-  <title>Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<!--Import materialize-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../vendors/materialize/css/materialize.min.css" media="screen,projection" />
+<link href="../css/main.css" rel="stylesheet">
+<title>Home</title>
 </head>
-
-<body class="">
-    <nav class="nav-extended">
-        <div class="nav-wrapper teal darken-1">
-          <a href="#" class="brand-logo">Travel</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="user.html">Perfil</a></li>
-            <li><a href="viajes.html">Viajes</a></li>
-            <li><a href="desktop.html">Inicio</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="main.html">Cerrar Sesión</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="user.html"><i class="material-icons  orange-text text-darken-1">account_circle</i>Perfil</a></li>
-            <li><a href="viajes.html"><i class="material-icons light-blue-text text-darken-3">image</i>Viajes</a></li>
-            <li><a href="desktop.html"><i class="material-icons purple-text">face</i>Inicio</a></li>
-            <li><a href="fotos.html"><i class="material-icons red-text text-lighten-1">local_see</i>Fotos</a></li>
-            <li class="users-js"><a href="#"><i class="material-icons indigo-text text-darken-2">people</i>Usuarios Conectados</a></li>
-            <ul class="users collection"></ul>
-            <li><a href="main.html"><i class="material-icons grey-text">close</i>Cerrar Sesión</a></li>
-          </ul>
-        </div>
-        <div class="nav-content teal lighten-4 nav-hide">
-          <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="desktop.html"><i class="material-icons teal-text text-darken-3">chrome_reader_mode</i></a></li>
-            <li class="tab"><a class="active" href="user.html"><i class="material-icons teal-text text-darken-3">person_outline</i></a></li>
-            <li class="tab"><a href="chat.html"><i class="material-icons teal-text text-darken-3">message</i></a></li>
-            <li class="tab"><a href="viajes.html"><i class="material-icons teal-text text-darken-3">notifications_none</i></a></li>
-            <a href="post.html" id="post"class="btn btn-floating cyan pulse"><i class="material-icons">add</i></a>
-          </ul>
-        </div>
-      </nav>
-    <div class="nav-content white ">
-        <ul class="tabs tabs-transparent row">
-          <li  id ="publication" class="tab col s2 l2 offset-l2"><a href="desktop.html"><i class="material-icons">chrome_reader_mode</i></a> </li>
-          <li class="tab col s2 l2"><a href="user.html"><i class="material-icons">person_outline</i></a> </li>
-          <li id = "message"class="tab col s2 l2"><a href="chat.html"><i class="material-icons">message</i></a> </li>
-          <li id="notification"class="tab col s2 l2"><a href="viajes.html"><i class="material-icons">notifications_none</i></a> </li>
-        </ul>
-      </div>
-    <br>
-    <div class="gallery">
-  <div class="row ">
-      <div class="col s9">
-            <div id="images-firebase" class="responsive-img"></div>
-      </div>
-      <div class="col s3">
-          <form id="form-imagenes" action="">
-              <label >
-                  <input type="file" name="fichero" value="" id="fichero" class="hide">
-                  <img class="responsive-img" src="../assets/images/Upload.png" alt="descargar">
-              </label>
-          </form>
-
-         <div class="hide" id="progress"> 
-      <div class="indeterminate " id="barprogress"></div>
+<nav class="nav-extended">
+  <div class="nav-wrapper teal darken-1">
+    <a href="#" class="brand-logo">Travel</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="user.html">Perfil</a>
+      </li>
+      <li>
+        <a href="viajes.html">Viajes</a>
+      </li>
+      <li>
+        <a href="chat.html">Chat</a>
+      </li>
+      <li>
+        <a href="maps.html">Geolocalización</a>
+      </li>
+      <li>
+        <a href="desktop.html">Inicio</a>
+      </li>
+      <li>
+        <a href="fotos.html">Fotos</a>
+      </li>
+      <li>
+        <a href="main.html">Cerrar Sesión</a>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li>
+        <a href="user.html">
+          <i class="material-icons  orange-text text-darken-1">account_circle</i>Perfil</a>
+      </li>
+      <li>
+        <a href="viajes.html">
+          <i class="material-icons light-blue-text text-darken-3">image</i>Viajes</a>
+      </li>
+      <li>
+        <a href="desktop.html">
+          <i class="material-icons purple-text">face</i>Inicio</a>
+      </li>
+      <li>
+        <a href="chat.html">
+          <i class="material-icons light-blue-text text-darken-3">message</i>Chat</a>
+      </li>
+      <li>
+        <a href="maps.html">
+          <i class="material-icons light-blue-text text-darken-3">language</i>Geolocalización</a>
+      </li>
+      <li>
+        <a href="fotos.html">
+          <i class="material-icons red-text text-lighten-1">local_see</i>Fotos</a>
+      </li>
+      <li class="users-js">
+        <a href="#">
+          <i class="material-icons indigo-text text-darken-2">people</i>Usuarios Conectados</a>
+      </li>
+      <ul class="users collection"></ul>
+      <li>
+        <a href="main.html">
+          <i class="material-icons grey-text">close</i>Cerrar Sesión</a>
+      </li>
+    </ul>
   </div>
-       
-        </div>
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li id="publication" class="tab">
+        <a href="desktop.html">
+          <i class="material-icons">chrome_reader_mode</i>
+        </a>
+      </li>
+      <li id="friend">
+        <a href="friends.html">
+          <i class="material-icons">person_outline</i>
+        </a>
+      </li>
+      <li id="messages" class="tab">
+        <a href="chat.html">
+          <i class="material-icons">message</i>
+        </a>
+      </li>
+      <li id="notification" class="tab">
+        <a href="viajes.html">
+          <i class="material-icons">notifications_none</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="nav-content white ">
+  <ul class="tabs tabs-transparent row">
+    <li id="publication" class="tab col s2 l2 offset-l2">
+      <a href="desktop.html">
+        <i class="material-icons">chrome_reader_mode</i>
+      </a>
+    </li>
+    <li class="tab col s2 l2">
+      <a href="user.html">
+        <i class="material-icons">person_outline</i>
+      </a>
+    </li>
+    <li id="message" class="tab col s2 l2">
+      <a href="chat.html">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+    <li id="notification" class="tab col s2 l2">
+      <a href="viajes.html">
+        <i class="material-icons">notifications_none</i>
+      </a>
+    </li>
+  </ul>
+</div>
+<br>
+<div class="gallery">
+  <div class="row ">
+    <div class="col s9">
+      <div id="images-firebase" class="responsive-img"></div>
+    </div>
+    <div class="col s3">
+      <form id="form-imagenes" action="">
+        <label>
+          <input type="file" name="fichero" value="" id="fichero" class="hide">
+          <img class="responsive-img" src="../assets/images/Upload.png" alt="descargar">
+        </label>
+      </form>
+
+      <div class="hide" id="progress">
+        <div class="indeterminate " id="barprogress"></div>
+      </div>
+
+    </div>
   </div>
 </div>
-  <!-- Materialize  Jquery JavaScript -->
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="../vendors/js/jquery.min.js"></script>
-  <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
-  <script src="../js/main.js"></script>  
-  <script src="../js/pictures.js"></script>
+<!-- Materialize  Jquery JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="../vendors/js/jquery.min.js"></script>
+<script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/pictures.js"></script>
 </body>
 
 </html>

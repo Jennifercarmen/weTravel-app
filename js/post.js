@@ -72,25 +72,3 @@ function signOut() {
 };
 var $logout = $('.logout');
 $logout.on('click', signOut);
-
-// ---------------------Enlaces------------------
-var $foto = $('#foto');
-$foto.on('click', function () {
-  window.location.href = 'fotos.html';
-});
-var $notificacion = $('#notification');
-$notificacion.on('click', function () {
-  window.location.href = 'viajes.html';
-});
-
-var $publication = $('#publication');
-$publication.on('click', function () {
-  window.location.href = 'home.html';
-});
-var $viajes = $('#viajes');
-$viajes.on('click', function () {
-  window.location.href = 'viajes.html';
-});
-$messages.on('click', function () {
-  window.location.href = 'chat.html';
-});
