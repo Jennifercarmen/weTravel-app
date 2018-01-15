@@ -67,7 +67,7 @@ function signInGoogle() {
     user = result.user;
     console.log(user);
     initApp();
-    window.location.href = 'home.html';
+    window.location.href = 'desktop.html';
   });
 }
 var $logout = $('.logout');
