@@ -156,12 +156,6 @@ function viewPost() {
   } else if (window.location.href == 'https://jennifercarmen.github.io/RED-SOCIAL/views/user.html') {
     firebase.auth().onAuthStateChanged(function(user) {
       var uiduser = user.uid;
-
-      /* firebase.database().ref('post').once('value', function (snapshot) {                   
-                console.log(snapshot.numChildren()*-1);                
-            }); */
-
-      // .orderByChild("message")
       firebase.database().ref('post').orderByChild('count').on('child_added', function(snapshot) {
         var html = '';
         var key = snapshot.key;
