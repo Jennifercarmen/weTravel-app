@@ -86,7 +86,7 @@ function postear() {
 };
 
 function viewPost() {
-  if (window.location.href == "https://jennifercarmen.github.io/RED-SOCIAL/views/desktop.html") {
+  if (window.location.href == "https://jennifercarmen.github.io/weTravel-app//views/desktop.html") {
     firebase.database().ref('post').on('child_added', function(snapshot) {
       var html = '';
       var key = snapshot.key;
@@ -153,7 +153,7 @@ function viewPost() {
         });
       });
     });
-  } else if (window.location.href == "https://jennifercarmen.github.io/RED-SOCIAL/views/user.html") {
+  } else if (window.location.href == "https://jennifercarmen.github.io/weTravel-app/views/user.html") {
     firebase.auth().onAuthStateChanged(function(user) {
       var uiduser = user.uid;
       firebase.database().ref('post').orderByChild('count').on('child_added', function(snapshot) {
