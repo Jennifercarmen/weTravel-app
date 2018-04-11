@@ -86,7 +86,7 @@ function postear() {
 };
 
 function viewPost() {
-  if (window.location.href == "https://jennifercarmen.github.io/weTravel-app//views/desktop.html") {
+  if (window.location.href == "https://jennifercarmen.github.io/weTravel-app/views/desktop.html") {
     firebase.database().ref('post').on('child_added', function(snapshot) {
       var html = '';
       var key = snapshot.key;
@@ -110,7 +110,7 @@ function viewPost() {
                     '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
                     '</div>' +
                     '<div class="col s9">' +
-                    '<span id="name_user bold">' + name + '</span>' +
+                    '<span id="name_user bold"><b>' + name + '</b></span>' +
                     '<br>' +
                     '<span class="fecha_post">' +
                     fecha + ' - ' + hora +
@@ -131,11 +131,11 @@ function viewPost() {
                     '<div class="row">' +
                     '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
                     '<div class="col s4"><i data-key=' + key + ' class="tiny material-icons icon_post comment">message</i></div>' +
-                    '<div class="col s4"><i class="tiny material-icons icon_post">share</i></div>' +
+                    '<div class="col s4"><i class="tiny material-icons icon_post modal-trigger" href="#compartirMap">share</i></div>' +
                     '</div>' +
 
                     '</div>' +
-                    '</div>/';
+                    '</div>';
 
 
         $boxPost.append(html);
@@ -153,7 +153,7 @@ function viewPost() {
         });
       });
     });
-  } else if (window.location.href == "https://jennifercarmen.github.io/weTravel-app//views/user.html") {
+  } else if (window.location.href == "https://jennifercarmen.github.io/weTravel-app/views/user.html") {
     firebase.auth().onAuthStateChanged(function(user) {
       var uiduser = user.uid;
       firebase.database().ref('post').orderByChild('count').on('child_added', function(snapshot) {
@@ -182,7 +182,7 @@ function viewPost() {
                             '<img class="responsive-img profile-img" id="img-user" src=' + photoURL + ' alt="">' +
                             '</div>' +
                             '<div class="col s9">' +
-                            '<span id="name_user bold">' + name + '</span>' +
+                            '<span id="name_user bold"><b>' + name + '</b></span>' +
 
                             '<br>' +
                             '<span class="fecha_post">' +
@@ -200,16 +200,13 @@ function viewPost() {
                             '<div class="row">' +
                             '<div class="col s4"><i  class="tiny material-icons icon_post">favorite_border</i></div>' +
                             '<div class="col s4"><i data-key=' + key + ' class="tiny material-icons icon_post comment">message</i></div>' +
-                            '<div class="col s4"><i class="tiny material-icons icon_post">share</i></div>' +
+                            '<div class="col s4"><i class="tiny material-icons icon_post modal-trigger" href="#compartirMap">share</i></div>' +
                             '</div>' +
                             '<div class="row">' +
                             '<div class="col s12"><img class="responsive-img" src=' + url + '></div>' +
 
                             '</div>' +
-                            '<div class="row options">' +
-                            '<div class="col s1 offset-s9 offset-m9"><i class="tiny material-icons icon_post">edit</i></div>' +
-                            '<div class="col s1"><i data-id=' + key + ' class="tiny material-icons delete">delete</i></div>' +
-                            '</div>';
+                 
             '</div>' +
                             '</div>/';
           }

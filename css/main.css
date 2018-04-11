@@ -325,9 +325,11 @@ a#post {
     margin-bottom: 10px;
     padding: 15px;
 }
-
+.bold{
+    font-weight: bold;
+}
 .post {
-    background-color: #2d2b2b57;
+    background-color: rosybrown;
     padding-bottom: 1px;
 }
 .icons{
@@ -489,10 +491,11 @@ ul.tabs {
     overflow: hidden;
 }
 @media (min-width: 768px) {
-
+    a#btnEnviar {
+        transform: translateX(-250px);
+    }
 
 img.responsive-img, video.responsive-video {
-    max-width: 30%;
     height: auto;
 }
 }
@@ -504,3 +507,30 @@ img.responsive-img, video.responsive-video {
 i.material-icons {
     color: #544b4b;
 }
+
+.collapsible-body {
+  
+    padding: 0rem;
+}
+i{
+    cursor: pointer;
+}
+ul#nav-mobile {
+    width: 700px;
+}
+img#cardimage {
+    width: 30%;
+    /* padding-left: 50px; */
+}
+div#amigos {
+    padding: 25px;
+}
+img#img-user {
+    width: 150px;
+}
+a#btnEnviar {
+    transform: translateX(-200px);
+}
+form#form-imagenes {
+    width: 50px;
+  }
