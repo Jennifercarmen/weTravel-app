@@ -2,28 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Index - TRAVEL</title>
-  <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="assets/icons/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/logo.png">
+  <!-- Materialize core CSS -->
+  <link type="text/css" rel="stylesheet" href="vendors/materialize/css/materialize.min.css" />
+  <link href="css/main.css" rel="stylesheet">
+  <title>Viajes</title>
 </head>
 
-<body id="bg_index">
+<body>
 
-  <h5 class="center-align style_h5">TRAVEL</h5>
-  <!-- Efecto de carga -->
-  <div id="contenedor">
-    <div class="loader" id="loader">Loading...</div>
-  </div>
-  <!--  Fin de Efecto de carga -->
+  <section class="main">
+    <div class="opacity">
+        <div class="row">
+            <div class="col s12">
+              <p class="texto  bold center colorwhite">CONOCE VIAJEROS QUE TENGAN PLANES SIMILARES CONTIGO</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+    
+              <button id="inifacebook" class="center-align waves-effect waves-light btn">
+                <i class="fa fa-facebook fa-3" aria-hidden="true"></i> Continuar con facebook</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+                <button id="inigoogle" class="center-align waves-effect waves-light btn">
+                  <i class="fa fa-google fa-3" aria-hidden="true"></i>  Continuar con Google</button>
+            </div>
+          </div>
+    </div>
+  </section>
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+  <!-- - jquery- JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="vendors/js/jquery.min.js"></script>
+  <script type="text/javascript" src="vendors/materialize/js//materialize.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
