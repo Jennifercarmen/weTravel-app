@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 var $usersconect = $('.users');
 
-// Mustra en pantalla los datos a publicar con los datos almacenados en firebase
+// Muestra en pantalla los datos a publicar con los datos almacenados en firebase
 firebase.database().ref('connected').on('value', function(snapshot) {
   var html = '';
   snapshot.forEach(function(e) {

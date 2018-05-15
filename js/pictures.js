@@ -11,20 +11,16 @@ function inicializar() {
   viewImages();
 }
 function viewImages() {
-
-  firebase.auth().onAuthStateChanged(function (user) {
-    firebase.database().ref('images').on('child_added', function (snapshot) {
+  firebase.auth().onAuthStateChanged(function(user) {
+    firebase.database().ref('images').on('child_added', function(snapshot) {
       var result = '';
       var uiduser = user.uid;
       var uid = snapshot.val().uid;
       var ruta = snapshot.val().url;
       var $boximage = $('#images-firebase');
       if (uiduser === uid) {
-
-
         result += '<img width="150px" height="120px" src="' + ruta + '"/>';
         $boximage.append(result);
-
       }
     });
   });
@@ -34,15 +30,15 @@ function uploadImage() {
   var uploadImages = StorageRef.child('images/' + imageUpload.name).put(imageUpload);
   document.getElementById('progress').className = '';
   uploadImages.on('state_changed',
-    function (snapshot) {
+    function(snapshot) {
       // se va mostrando el progreso de la subida de la imagen
-    }, function (error) {
+    }, function(error) {
       // Gestionar el error si se produce
       alert('Hubo un error');
-    }, function () {
+    }, function() {
       // cuando se ha subido exitosamente
       var downloadURL = uploadImages.snapshot.downloadURL;
-      firebase.auth().onAuthStateChanged(function (user) {
+      firebase.auth().onAuthStateChanged(function(user) {
         createNodeFirebase(imageUpload.name, downloadURL, user.uid);
       });
       document.getElementById('progress').className = 'hide';
@@ -56,25 +52,25 @@ function createNodeFirebase(nameImage, downloadURL, uid) {
     uid: uid
   });
 }
-//---------------------Enlaces------------------
+// ---------------------Enlaces------------------
 var $foto = $('#foto');
-$foto.on('click', function () {
+$foto.on('click', function() {
   window.location.href = 'fotos.html';
 });
 var $notificacion = $('#notification');
-$notificacion.on('click', function () {
+$notificacion.on('click', function() {
   window.location.href = 'viajes.html';
 });
 
 var $publication = $('#publication');
-$publication.on('click', function () {
+$publication.on('click', function() {
   window.location.href = 'home.html';
 });
 var $viajes = $('#viajes');
-$viajes.on('click', function () {
+$viajes.on('click', function() {
   window.location.href = 'viajes.html';
 });
 var $message = $('#message');
-$message.on('click', function () {
+$message.on('click', function() {
   window.location.href = 'chat.html';
 });

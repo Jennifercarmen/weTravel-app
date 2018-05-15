@@ -519,8 +519,8 @@ ul#nav-mobile {
     width: 700px;
 }
 img#cardimage {
-    width: 30%;
-    /* padding-left: 50px; */
+    width: 20%;
+    border-radius: 50%;
 }
 div#amigos {
     padding: 25px;
@@ -533,4 +533,11 @@ a#btnEnviar {
 }
 form#form-imagenes {
     width: 50px;
-  }
+}
+
+@media (min-width: 768px) {
+
+    .nav-content { 
+        display: none; 
+     }
+}    

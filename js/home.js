@@ -2,17 +2,17 @@ $('.button-collapse').sideNav();
 // llamamos al chat
 var $messages = $('#messages');
 var $post = $('#post');
-$messages.on('click', function() {
+$messages.on('click', function () {
   window.location.href = 'chat.html';
 });
-$post.on('click', function() {
+$post.on('click', function () {
   window.location.href = 'post.html';
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   var validatePost = false;
 
-  $('#writepost').on('input', function() {
+  $('#writepost').on('input', function () {
     if ($(this).val()) {
       validatePost = true;
       activeButton();
@@ -30,18 +30,18 @@ $(document).ready(function() {
   function desactiveButton() {
     $('#btnEnviar').attr('disabled', 'disabled');
   }
-}); 
+});
 var $foto = $('#foto');
-$foto.on('click', function() {
+$foto.on('click', function () {
   window.location.href = 'fotos.html';
 });
 var $notificacion = $('#notification');
-$notificacion.on('click', function() {
+$notificacion.on('click', function () {
   window.location.href = 'viajes.html';
 });
 
 var $publication = $('#publication');
-$publication.on('click', function() {
-  window.location.href = 'home.html';
+$publication.on('click', function () {
+  window.location.href = 'desktop.html';
 });
 
